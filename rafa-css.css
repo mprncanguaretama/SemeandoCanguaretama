@@ -170,4 +170,26 @@ hr
     border-top: 1px solid #094CFA;
 
      }
+.contato_e_imagem a::before {
+    content: "• ";  /* Insere a "bolinha" antes do texto do link */
+    color: inherit; /* A cor da "bolinha" será a mesma do texto do link */
+    font-size: 20pt;
+    font-family: Serif;
+}
+
+.contato_e_imagem a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 20pt;
+    font-family: Serif;
+}
+
+.contato_e_imagem a:hover {
+    color: blue;
+    font-size: 24pt;
+
+}
+
+
+
 
