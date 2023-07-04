@@ -247,5 +247,17 @@ hr
   height: 100%;
 }
 
+section.font-cinzel * {
+    font-family: 'Cinzel', serif;
+}
+
+section.font-cinzel h2 + p::first-letter {
+    font-size: 5em;
+    float: left;
+    margin-right: 0.1em;
+    line-height: 0.9em;
+    font-style: italic;
+}
+
 
 
