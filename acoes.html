@@ -9,82 +9,24 @@
 
 
     <link href="rafa-css.css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
-<body class="bg-success p-2 text-dark bg-opacity-10">
-
-<header id="novo_background">
-    <div>
-        <img src="logo-mprn.png" alt="Imagem da logomarca do MPRN">
-    </div>
-
-    <nav>
-        <br>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Institucional
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="missao.html">Missão</a></li>
-                <li><a class="dropdown-item" href="quem_somos.html">Quem somos</a></li>
-                <li><a class="dropdown-item" href="legislacao.html">Legislação</a></li>
-                <li><a class="dropdown-item" href="historico_açoes.html">Nossas ações</a></li>
-                <li><a class="dropdown-item" href="primeira_canguaretama.html">1º Promotoria de Canguaretama</a></li>
-                <li><a class="dropdown-item" href="contatos.html">Contatos</a></li>
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Canguaretama
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="gruta_do_bode.html#">Gruta do Bode</a></li>
-                <li><a class="dropdown-item" href="barra_de_cunhau.html#">Barra de Cunhau</a></li>
-                <li><a class="dropdown-item" href="forte_barra_cunhau.html#">O Forte de Barra de Cunhau</a></li>
 
 
-            </ul>
-        </div>
 
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Vila Flor
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="senzala.html">Senzala</a></li>
-                <li><a class="dropdown-item" href="beiraRio.html">Beira Rio</a></li>
+<div id="header-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#header-placeholder").load("header.html");
+});
 
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Baía Formosa
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="lagoa_da_coca_cola.html#">Lagoa da Coca Cola</a></li>
+</script>
 
 
-            </ul>
-        </div>
 
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Pedro Velho
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="PauGrande.html">Pau Grande</a></li>
-            </ul>
 
-        </div>
-    </nav>
-</header>
 
 <main>
     <section class="section-rafa">
