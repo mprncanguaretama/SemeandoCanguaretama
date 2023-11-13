@@ -6,105 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
     <link href="rafa-css.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/4dbf101813.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
-<header id="novo_background">
-    <div>
-        <img src="logo-mprn.png" alt="Imagem da logomarca do MPRN">
-    </div>
-
-    <nav>
-        <br>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Institucional
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="missao.html">Missão</a></li>
-                <li><a class="dropdown-item" href="quem_somos.html">Quem somos</a></li>
-                <li><a class="dropdown-item" href="legislacao.html">Legislação</a></li>
-                <li><a class="dropdown-item" href="historico_açoes.html">Nossas ações</a></li>
-                <li><a class="dropdown-item" href="primeira_canguaretama.html">1º Promotoria de Canguaretama</a></li>
-
-                <li><a class="dropdown-item" href="contatos.html">Contatos</a></li>
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Canguaretama
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="gruta_do_bode.html#">Gruta do Bode</a></li>
-                <li><a class="dropdown-item" href="barra_de_cunhau.html#">Barra de Cunhau</a></li>
-                <li><a class="dropdown-item" href="forte_barra_cunhau.html#">O Forte de Barra de Cunhau</a></li>
 
 
-            </ul>
-        </div>
+<div id="header-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#header-placeholder").load("header.html");
+});
 
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Vila Flor
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="senzala.html">Senzala</a></li>
-                <li><a class="dropdown-item" href="beiraRio.html">Beira Rio</a></li>
+</script>
 
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Baía Formosa
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="lagoa_da_coca_cola.html#">Lagoa da Coca Cola</a></li>
-
-
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Pedro Velho
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="PauGrande.html">Pau Grande</a></li>
-            </ul>
-
-        </div>
-    </nav>
-</header>
 
 <main>
     <section class="section-rafa">
         <h1 class="text-center"> Contatos</h1>
         <ul>
             <li class="contato_e_imagem">
-                <img id="atendente_telefone" src="img_atendimento.png" alt="imagem de atendente">
+                <img id="atendente_telefone" src="\imagens\img_atendimento.png" alt="imagem de atendente">
                 <p>Telefone Funcional: <b>+55 84 9972-4630</b></p>
             </li>
             <li class="contato_e_imagem">
-                <img id="img_email" src="img_email.png" alt="ïmagem de email">
+                <img id="img_email" src="\imagens\img_email.png" alt="ïmagem de email">
                 <p>E-mail Funcional: <b>pmj.canguaretama@mprn.mp.br</b></p>
             </li>
             <li class="contato_e_imagem">
-                <img id="img_localizacao" src="img_localizacao.png">
+                <img id="img_localizacao" src="\imagens\img_localizacao.png">
                 <p>Endereço: <b>Rua Princesa Isabel, nº 190, Centro, Canguaretama/RN. CEP 59.190-000</b></p>
             </li>
             <li class="contato_e_imagem">
-                <img id="img_horario_funcionamento" src="relogio-final.png">
+                <img id="img_horario_funcionamento" src="\imagens\relogio-final.png">
                 <p>Horário de atendimento: De segunda a quinta-feira, das 08:00 às 17:00, na sexta-feira, das 08:00 às
                     14:00 horas</p>
             </li>

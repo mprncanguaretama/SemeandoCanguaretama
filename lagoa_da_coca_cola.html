@@ -6,148 +6,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./style.css">
     <link href="rafa-css.css" rel="stylesheet"/>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <style>
 
-.container {
-  display: flex;
-  width: 100%;
-  padding: 4% 2%;
-  box-sizing: border-box;
-  height: 80vh;
-}
-
-.box {
-  flex: 1;
-  overflow: hidden;
-  transition: 0.5s;
-  margin: 0 2%;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  line-height: 0;
-}
-
-.box > img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: 0.5s;
-}
-
-.box > span {
-  font-size: 1.5vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.box:hover {
-  flex: 1 1 50%;
-}
-
-.box:hover > img {
-  width: 50%;
-  height: 50%;
-}
-.iframe-youtube{
-  position: relative;
-  width: 100%;
-  padding-bottom: 20%;
-  height: 0;
-}
-.iframe-container iframe{
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    <!--    menu cabeçalho-->
 
 
-
-
-
-    </style>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body>
-<header id="novo_background">
-    <div>
-        <img src="logo-mprn.png" alt="Imagem da logomarca do MPRN">
-    </div>
-
-    <nav>
-        <br>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Institucional
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="missao.html">Missão</a></li>
-                <li><a class="dropdown-item" href="quem_somos.html">Quem somos</a></li>
-                <li><a class="dropdown-item" href="legislacao.html">Legislação</a></li>
-                <li><a class="dropdown-item" href="historico_açoes.html">Nossas ações</a></li>
-                <li><a class="dropdown-item" href="primeira_canguaretama.html">1º Promotoria de Canguaretama</a></li>
-
-                <li><a class="dropdown-item" href="contatos.html">Contatos</a></li>
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Canguaretama
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="gruta_do_bode.html#">Gruta do Bode</a></li>
-                <li><a class="dropdown-item" href="barra_de_cunhau.html#">Barra de Cunhau</a></li>
-                <li><a class="dropdown-item" href="forte_barra_cunhau.html#">O Forte de Barra de Cunhau</a></li>
 
 
-            </ul>
-        </div>
+<div id="header-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#header-placeholder").load("header.html");
+});
 
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Vila Flor
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="senzala.html">Senzala</a></li>
-                <li><a class="dropdown-item" href="beiraRio.html">Beira Rio</a></li>
+</script>
 
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Baía Formosa
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="lagoa_da_coca_cola.html#">Lagoa da Coca Cola</a></li>
-
-
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                Pedro Velho
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="PauGrande.html">Pau Grande</a></li>
-            </ul>
-
-        </div>
-    </nav>
-</header>
 
 <main>
     <h1 class="text-center">
@@ -158,9 +36,11 @@
         <h2> Conheça a Lagoa da Coca Cola </h2>
         <p>Falando na Lagoa, ela também é conhecida como "Lagoa da Coca-Cola" devido à coloração avermelhada de suas
             águas - resultado da grande presença de matéria orgânica nesse meio.</p>
-        <p>Sua cor escura é devido à composicão química do solo, rico em <b>iodo, ferro e carvão mineral</b>, além da
+        <p>Sua cor escura é devido à composicão química do solo, rico em <b>iodo, ferro e carvão mineral</b>, além
+            da
             <b>pigmentacão das raízes das árvores</b> ao seu redor.</p>
-        <p>Originalmente conhecida como <b>Lagoa da Araraquara</b>, a atração é procurada pelos que acreditam que suas
+        <p>Originalmente conhecida como <b>Lagoa da Araraquara</b>, a atração é procurada pelos que acreditam que
+            suas
             águas curam e rejuvenescem.
 
         </p>
@@ -169,20 +49,24 @@
     <!-- partial:index.partial.html -->
     <div class="container">
         <div class="box">
-            <img src="coca1.jfif">
+            <img src="\imagens\coca1.jfif">
             <span>Lagoa da Coca Cola</span>
         </div>
         <div class="box">
-            <img src="coca2.jfif">
-            <span>Lagoa da Coca Cola1</span>
+            <img src="\imagens\coca2.jfif">
+            <span>Lagoa da Coca Cola</span>
         </div>
         <div class="box">
-            <img src="coca3.jfif">
-            <span>Lagoa da Coca Cola2</span>
+            <img src="\imagens\coca3.jfif">
+            <span>Lagoa da Coca Cola</span>
         </div>
         <div class="box">
-            <img src="coca4.jfif">
-            <span>Lagoa da Coca Cola3</span>
+            <img src="\imagens\coca4.jfif">
+            <span>Lagoa da Coca Cola</span>
+        </div>
+        <div class="box">
+            <img src="\imagens\coca5.jpg">
+            <span>Lagoa da Coca Cola</span>
         </div>
     </div>
     <!-- partial -->
@@ -199,10 +83,10 @@
     </center>
 
 
-     <h2 style="margin-top:200px">Onde fica?</h2>
+    <h2 style="margin-top:200px">Onde fica?</h2>
     <p> A Lagoa da Coca Cola fica localizada a aproximadamente 100km de Natal,
         situando-se no Município de Baía Formosa.</p>
-    <img src="mapa.bmp" class="img_moldura_maior">
+    <img src="\imagens\mapa_coca_cola.bmp" class="img_moldura_maior">
 
 
     <section class="return">
