@@ -264,7 +264,48 @@ section.font-cinzel h2 + p::first-letter {
     font-style: italic;
 }
 
+.geo-tools-center-title {
+    text-align: center;
+}
 
+.geo-ambiental-wrapper {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.geo-info-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.geo-features-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.geo-access-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+
+    /* Novo estilo de fundo para o botão */
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+.geo-access-link:hover {
+    /* Estilo de fundo para o botão quando o mouse está sobre ele */
+    /* Você pode ajustar isso conforme necessário */
+    background-color: #128849;
+    background-image: linear-gradient(120deg, #104f72, #128849);
+}
 
 
 
