@@ -63,6 +63,7 @@ h2
         border: 1px solid #1b6b6f;
         padding:1px;
         }
+
  .img_moldura_maior
         {
         display: block;
@@ -231,12 +232,12 @@ hr
 }
 
 .box:hover {
-  flex: 1 1 50%;
+  flex: 1 1 100%;
 }
 
 .box:hover > img {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 75%;
 }
 .iframe-youtube{
   position: relative;
@@ -309,4 +310,47 @@ section.font-cinzel h2 + p::first-letter {
 
 
 
+.carousel-container {
+    width: 30%; /* ou o tamanho que você desejar */
+    margin: auto; /* centraliza o carrossel */
+    overflow: hidden; /* previne que imagens grandes estourem o layout */
+}
 
+.carousel-container .carousel-item {
+    position: relative; /* Para posicionar a legenda se necessário */
+    height: 500px; /* Define uma altura fixa para todos os itens do carrossel */
+}
+
+.carousel-container .carousel-item img {
+    width: 100%; /* faz com que as imagens se ajustem à largura do contêiner */
+    height: 500px; /* altura fixa para as imagens */
+    object-fit: cover; /* corta a imagem para cobrir o espaço disponível sem distorção */
+}
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 90%; /* O carrossel ocupa mais espaço em telas menores */
+    }
+
+    .carousel-container .carousel-item {
+        height: 300px; /* Pode ajustar a altura para uma visualização melhor em telas menores */
+    }
+
+    .carousel-container .carousel-item img {
+        height: 300px; /* altura correspondente para as imagens em telas menores */
+    }
+}
+
+
+.img_moldura_img_localizacao {
+    display: block;
+    margin: auto;
+    width: 900px; /* Define a largura da imagem */
+    height: 900px; /* Define a altura da imagem para torná-la quadrada */
+    border: 5px solid #1b6b6f; /* Ajusta a espessura da moldura */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    background-color: #fff; /* Define uma cor de fundo para espaços vazios */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra para um efeito mais atraente */
+    padding: 1px; /* Mantém o espaçamento interno */
+}
