@@ -2,7 +2,28 @@
 #novo_background {
     background-color: #159957;
     background-image: linear-gradient(120deg, #155799, #159957);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Um valor alto de z-index para garantir que o cabeçalho fique acima de outros elementos */
+
 }
+
+#footer_background {
+    background-color: #159957;
+    background-image: linear-gradient(300deg, #155799, #159957);
+    width: 100%;
+    height: 150px;
+    color: #FFFFFF; /* cor do texto */
+    font-family: Arial, sans-serif; /* Tipo de fonte genérico; substitua pela fonte exata se necessário */
+    font-size: 16px; /* Tamanho do texto; ajuste conforme necessário */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra do texto para efeito de relevo */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
 
 section-rafa
         {
@@ -19,15 +40,8 @@ section-rafa
         margin: 50px 75px;
        }
 
-footer
-        {
-        text-align: left;
-        font-size: 12pt;
-        font-family: Serif;
-        position: absolute;
-        width:100%
-        height: 100%;
-        }
+
+
 
 p
         {
@@ -362,4 +376,46 @@ section.font-cinzel h2 + p::first-letter {
   background-color: #c8c8c8; /* A cor da linha */
   margin: 75px; /* Espaço ao redor da linha */
 
+}
+
+.footer-content {
+margin-top: 50px;
+
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em colunas */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+
+.secao-redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajuste conforme necessário */
+}
+
+.elementor-icon-list-items {
+    list-style: none; /* Remove a estilização padrão da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex;
+    justify-content: center; /* Centraliza os ícones na lista */
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.elementor-icon-list-item {
+    margin: 0 10px; /* Espaçamento horizontal entre ícones */
+}
+
+.elementor-icon-list-icon i {
+    font-size: 24px; /* Tamanho dos ícones */
+    color: #FFFFFF; /* Cor dos ícones */
+}
+
+#footer_background {
+    background-color: #155799;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    color: #FFFFFF; /* Cor do texto */
+    /* Outras propriedades do footer */
 }
