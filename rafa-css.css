@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: #FFFFFF;
     }
 
 section-rafa
@@ -413,9 +414,3 @@ margin-top: 50px;
     color: #FFFFFF; /* Cor dos ícones */
 }
 
-#footer_background {
-    background-color: #155799;
-    background-image: linear-gradient(120deg, #155799, #159957);
-    color: #FFFFFF; /* Cor do texto */
-    /* Outras propriedades do footer */
-}
