@@ -459,3 +459,17 @@ margin-top: 50px;
   font-style: italic; /* Se você desejar que o nome do autor esteja em itálico */
   color: #555; /* Uma cor mais suave para o nome do autor */
 }
+
+
+.new-link::after {
+  content: "Novo";
+  color: green;
+  margin-left: 5px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
