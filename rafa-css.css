@@ -473,3 +473,47 @@ margin-top: 50px;
     opacity: 0;
   }
 }
+
+
+.supporters-container {
+            max-width: auto;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+
+
+
+.supporter-item {
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra mais escura e mais dispersa */
+    transition: transform 0.3s ease;
+}
+.supporter-item:hover {
+    transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* sombra maior no hover para um efeito "levantado" */
+
+}
+.supporter-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+.supporter-info {
+    margin-bottom: 10px;
+}
+.supporter-info strong {
+    color: #0275d8;
+}
+.supporter-desc {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .supporter-item {
+        margin: 20px 0;
+    }
+}
