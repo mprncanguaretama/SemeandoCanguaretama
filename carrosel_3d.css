@@ -1,5 +1,5 @@
 
-#slider, #slider1 {
+#slider, #slider1, #slider2 {
     position: relative;
     width: 50%;
     height: 32vw;
@@ -32,8 +32,9 @@ input[type="radio"]:checked{
 opacity: 1;
 }
 
-#slider label,
-#slider label img{
+#slider label, #slider1 label, #slider2 label,
+#slider label img, #slider1 label img, #slider2 label img
+{
 display: flex;
 position: absolute;
 top: 0;
@@ -50,24 +51,6 @@ cursor: pointer;
 transition: transform 400ms ease;
 }
 
-
-#slider1 label,
-#slider1 label img{
-display: flex;
-position: absolute;
-top: 0;
-left: 0;
-align-items: center;
-justify-content:center;
-width: 100%;
-height: 100%;
-border-radius: 3px;
-color: white;
-font-size: 70px;
-font-weight: bold;
-cursor: pointer;
-transition: transform 400ms ease;
-}
 
 
 
@@ -88,6 +71,16 @@ box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
 #s8:checked ~ #slide8,
 #s9:checked ~ #slide9,
 #s10:checked ~ #slide10{
+transform: translate3d(0%, 0, 0px);
+box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
+}
+
+/*Activition slide*/
+#s11:checked ~ #slide11,
+#s12:checked ~ #slide12,
+#s13:checked ~ #slide13,
+#s14:checked ~ #slide14,
+#s15:checked ~ #slide15{
 transform: translate3d(0%, 0, 0px);
 box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
 }
@@ -117,6 +110,19 @@ transform: translate3d(20%, 0, -100px);
 box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
 }
 
+/*Next Slide*/
+#s11:checked ~ #slide12,
+#s12:checked ~ #slide13,
+#s13:checked ~ #slide14,
+#s14:checked ~ #slide15,
+#s15:checked ~ #slide11
+{
+transform: translate3d(20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+
+
 /*Previous Slide*/
 #s1:checked ~ #slide5,
 #s2:checked ~ #slide1,
@@ -135,6 +141,17 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
 #s8:checked ~ #slide7,
 #s9:checked ~ #slide8,
 #s10:checked ~ #slide9
+{
+transform: translate3d(-20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+/*Previous Slide*/
+#s11:checked ~ #slide15,
+#s12:checked ~ #slide11,
+#s13:checked ~ #slide12,
+#s14:checked ~ #slide13,
+#s15:checked ~ #slide14
 {
 transform: translate3d(-20%, 0, -100px);
 box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
@@ -165,6 +182,22 @@ transform: translate3d(40%, 0, -250px);
 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
 }
 
+
+
+/*next to next*/
+#s11:checked ~ #slide13,
+#s12:checked ~ #slide14,
+#s13:checked ~ #slide15,
+#s14:checked ~ #slide11,
+#s15:checked ~ #slide12
+{
+transform: translate3d(40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
+
+
+
+
 /*previous to previous slide*/
 #s1:checked ~ #slide4,
 #s2:checked ~ #slide5,
@@ -188,3 +221,15 @@ transform: translate3d(-40%, 0, -250px);
 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
 }
 
+
+
+/*previous to previous slide*/
+#s11:checked ~ #slide14,
+#s12:checked ~ #slide15,
+#s13:checked ~ #slide11,
+#s14:checked ~ #slide12,
+#s15:checked ~ #slide13
+{
+transform: translate3d(-40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}

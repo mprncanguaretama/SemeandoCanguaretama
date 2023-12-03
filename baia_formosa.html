@@ -8,6 +8,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link href="rafa-css.css" rel="stylesheet"/>
+    <link href="carrosel_3d.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,118 +43,87 @@ $(document).ready(function(){
 
     <h2> Registros fotográficos da Baía Formosa</h2>
 
+    <div id="slider">
+        <input type="radio" name="slider" id="s6" checked>
+        <input type="radio" name="slider" id="s7">
+        <input type="radio" name="slider" id="s8">
+        <input type="radio" name="slider" id="s9">
+        <input type="radio" name="slider" id="s10">
 
-    <!-- partial:index.partial.html -->
-    <div class="container">
-        <div class="box">
-            <img src="imagens/baia_formosa_0.jpeg">
-            <span>Baía Formosa</span>
-        </div>
+        <label for="s6" id="slide6">
+            <img src="imagens/baia_formosa_0.jpeg" alt="">
+        </label>
 
-        <div class="box">
-            <img src="imagens/baia_formosa_1.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_2.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_3.jpeg">
-            <span>Baía Formosa</span>
-        </div>
+        <label for="s7" id="slide7">
+            <img src="imagens/baia_formosa_1.jpeg" alt="">
+        </label>
 
+        <label for="s8" id="slide8">
+            <img src="imagens/baia_formosa_2.jpeg" alt="">
+        </label>
+
+        <label for="s9" id="slide9">
+            <img src="imagens/baia_formosa_3.jpeg" alt="">
+        </label>
+
+        <label for="s10" id="slide10">
+            <img src="imagens/baia_formosa_4.jpeg" alt="">
+        </label>
+    </div>
+
+    <div id="slider1">
+        <input type="radio" name="slider1" id="s1" checked>
+        <input type="radio" name="slider1" id="s2">
+        <input type="radio" name="slider1" id="s3">
+        <input type="radio" name="slider1" id="s4">
+        <input type="radio" name="slider1" id="s5">
+
+        <label for="s1" id="slide1">
+            <img src="imagens/baia_formosa_5.jpeg" alt="">
+        </label>
+        <label for="s2" id="slide2">
+            <img src="imagens/baia_formosa_6.jpeg" alt="">
+        </label>
+        <label for="s3" id="slide3">
+            <img src="imagens/baia_formosa_7.jpeg" alt="">
+        </label>
+        <label for="s4" id="slide4">
+            <img src="imagens/baia_formosa_8.jpeg" alt="">
+        </label>
+        <label for="s5" id="slide5">
+            <img src="imagens/baia_formosa_9.jpeg" alt="">
+        </label>
+
+    </div>
+
+    <div id="slider2">
+        <input type="radio" name="slider2" id="s11" checked>
+        <input type="radio" name="slider2" id="s12">
+        <input type="radio" name="slider2" id="s13">
+        <input type="radio" name="slider2" id="s14">
+        <input type="radio" name="slider2" id="s15">
+
+        <label for="s11" id="slide11">
+            <img src="imagens/baia_formosa_10.jpeg" alt="">
+        </label>
+        <label for="s12" id="slide12">
+            <img src="imagens/baia_formosa_11.jpeg" alt="">
+        </label>
+        <label for="s13" id="slide13">
+            <img src="imagens/baia_formosa_12.jpeg" alt="">
+        </label>
+        <label for="s14" id="slide14">
+            <img src="imagens/baia_formosa_13.jpeg" alt="">
+        </label>
+        <label for="s15" id="slide15">
+            <img src="imagens/baia_formosa_14.jpeg" alt="">
+        </label>
 
     </div>
 
 
-    <!-- partial -->
-
-    <div class="container">
-        <div class="box">
-            <img src="imagens/baia_formosa_4.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/baia_formosa_5.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_6.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_7.jpeg">
-            <span>Baía Formosa</span>
-        </div>
 
 
-    </div>
-
-    <div class="container">
-        <div class="box">
-            <img src="imagens/baia_formosa_8.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/baia_formosa_9.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_10.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_11.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-
-
-    </div>
-
-    <div class="container">
-        <div class="box">
-            <img src="imagens/baia_formosa_12.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/baia_formosa_13.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_14.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_15.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-
-
-    </div>
-
-    <div class="container">
-        <div class="box">
-            <img src="imagens/baia_formosa_0.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/baia_formosa_1.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_2.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/baia_formosa_3.jpeg">
-            <span>Baía Formosa</span>
-        </div>
-    </div>
 
 
         <div class="divider"></div>
