@@ -34,8 +34,7 @@ opacity: 1;
 }
 
 #slider label, #slider1 label, #slider2 label, #slider3 label, #slider4 label,
-#slider label img, #slider1 label img, #slider2 label img, #slider3 label img, #slider4 label img
-{
+#slider label img, #slider1 label img, #slider2 label img, #slider3 label img, #slider4 label img{
 display: flex;
 position: absolute;
 top: 0;
