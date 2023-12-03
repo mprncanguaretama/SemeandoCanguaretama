@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <link rel="stylesheet" href="./style.css">
+        <link href="carrosel_3d.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
@@ -95,30 +97,33 @@ $(document).ready(function(){
         <h2> Registros fotográficos de Barra do Cunhaú</h2>
 
 
-    <!-- partial:index.partial.html -->
-    <div class="container">
+    <div id="slider">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+        <label for="s1" id="slide1">
+            <img src="imagens/entrada_barra1.jpeg" alt="">
+        </label>
 
+        <label for="s2" id="slide2">
+            <img src="imagens/entrada_barra2.jpeg" alt="">
+        </label>
 
-        <div class="box">
-            <img src="imagens/entrada_barra1.jpeg">
-            <span>Beira Rio</span>
-        </div>
-        <div class="box">
-            <img src="imagens/entrada_barra2.jpeg">
-            <span>Pórtico de Barra de Cunhaú</span>
-        </div>
-        <div class="box">
-            <img src="imagens/entrada_barra3.jpeg">
-            <span>Pórtico de Barra de Cunhaú</span>
-        </div>
-        <div class="box">
-            <img src="imagens/carangueijo_barra.jpeg">
-            <span>Estátua do Carangueijo</span>
-        </div>
+        <label for="s3" id="slide3">
+            <img src="imagens/entrada_barra3.jpeg" alt="">
+        </label>
 
+        <label for="s4" id="slide4">
+            <img src="imagens/carangueijo_barra.jpeg" alt="">
+        </label>
+
+        <label for="s5" id="slide5">
+            <img src="imagens/entrada_barra1.jpeg" alt="">
+        </label>
 
     </div>
-    <!-- partial -->
 
 
 

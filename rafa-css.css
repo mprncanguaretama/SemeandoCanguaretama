@@ -375,7 +375,7 @@ section.font-cinzel h2 + p::first-letter {
   height: 1px; /* Ajuste a altura conforme necessário */
   width: auto; /* Ajuste a largura da linha divisória */
   background-color: #c8c8c8; /* A cor da linha */
-  margin: 75px; /* Espaço ao redor da linha */
+  margin: 100px; /* Espaço ao redor da linha */
 
 }
 
@@ -480,6 +480,7 @@ margin-top: 50px;
             margin: auto;
             padding: 0 20px;
         }
+
 
 
 
