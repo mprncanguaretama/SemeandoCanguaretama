@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./style.css">
     <link href="rafa-css.css" rel="stylesheet"/>
+    <link href="carrosel_3d.css" rel="stylesheet">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -40,36 +41,65 @@ $(document).ready(function(){
     <h2> Registros fotográficos da antiga senzala de Vila Flor</h2>
 
     <!-- partial:index.partial.html -->
-    <div class="container">
-        <div class="box">
-            <img src="imagens/senzala1.jpeg">
-            <span>Fachada da senzala</span>
-        </div>
-        <div class="box">
-            <img src="imagens/senzala2.jpeg">
-            <span>Lateral da senzala</span>
-        </div>
-        <div class="box">
-            <img src="imagens/senzala3.jpeg">
-            <span>Pilar da senzala</span>
-        </div>
-        <div class="box">
-            <img src="imagens/senzala4.jpeg">
-            <span>Lateral da senzala</span>
-        </div>
-         <div class="box">
-            <img src="imagens/senzala5.jpeg">
-            <span>Lateral da senzala</span>
-        </div>
-         <div class="box">
-            <img src="imagens/senzala6.jpeg">
-            <span>Lateral da senzala</span>
-        </div>
-        <div class="box">
-            <img src="imagens/senzala7.jpg">
-            <span>Fachada da senzala</span>
-        </div>
+
+      <div id="slider1">
+        <input type="radio" name="slider1" id="s1" checked>
+        <input type="radio" name="slider1" id="s2">
+        <input type="radio" name="slider1" id="s3">
+        <input type="radio" name="slider1" id="s4">
+        <input type="radio" name="slider1" id="s5">
+
+        <label for="s1" id="slide1">
+            <img src="imagens/senzala1.jpeg" alt="">
+        </label>
+        <label for="s2" id="slide2">
+            <img src="imagens/senzala2.jpeg" alt="">
+        </label>
+        <label for="s3" id="slide3">
+            <img src="imagens/senzala3.jpeg" alt="">
+        </label>
+        <label for="s4" id="slide4">
+            <img src="imagens/senzala4.jpeg" alt="">
+        </label>
+        <label for="s5" id="slide5">
+            <img src="imagens/senzala5.jpeg" alt="">
+        </label>
+
     </div>
+
+    <!-- partial:index.partial.html -->
+
+     <div id="slider">
+        <input type="radio" name="slider" id="s6" checked>
+        <input type="radio" name="slider" id="s7">
+        <input type="radio" name="slider" id="s8">
+        <input type="radio" name="slider" id="s9">
+        <input type="radio" name="slider" id="s10">
+        <label for="s6" id="slide6">
+            <img src="imagens/senzala5.jpeg" alt="">
+        </label>
+
+        <label for="s7" id="slide7">
+            <img src="imagens/senzala6.jpeg" alt="">
+        </label>
+
+        <label for="s8" id="slide8">
+            <img src="imagens/senzala7.jpg" alt="">
+        </label>
+
+        <label for="s9" id="slide9">
+            <img src="imagens/senzala2.jpeg" alt="">
+        </label>
+
+        <label for="s10" id="slide10">
+            <img src="imagens/senzala6.jpeg" alt="">
+        </label>
+    </div>
+
+
+
+
+
     <!-- partial -->
 
 
