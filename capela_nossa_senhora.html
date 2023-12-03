@@ -12,6 +12,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
+    <link href="carrosel_3d.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
@@ -24,6 +25,7 @@
 $(document).ready(function(){
     $("#header-placeholder").load("header.html");
 });
+
 
 
 
@@ -63,167 +65,132 @@ $(document).ready(function(){
     <h2> Registros fotográficos das Ruínas da Capela de Nossa Senhora das Candeias (Engenho Cunhaú)</h2>
 
 
-    <!-- partial:index.partial.html -->
-    <div class="container">
-        <div class="box">
-            <img src="imagens/igreja.jpeg">
-            <span>Parte posterior da Capela</span>
-        </div>
+    <div id="slider">
+        <input type="radio" name="slider" id="s6" checked>
+        <input type="radio" name="slider" id="s7">
+        <input type="radio" name="slider" id="s8">
+        <input type="radio" name="slider" id="s9">
+        <input type="radio" name="slider" id="s10">
 
-        <div class="box">
-            <img src="imagens/igreja2.jpeg">
-            <span>Interior da Capela</span>
-        </div>
-        <div class="box">
-            <img src="imagens/igreja3.jpeg">
-            <span>Fachada da Capela</span>
-        </div>
-        <div class="box">
-            <img src="imagens/igreja4.jpeg">
-            <span>Teto da Capela</span>
-        </div>
+        <label for="s6" id="slide6">
+            <img src="imagens/igreja.jpeg" alt="">
+        </label>
+
+        <label for="s7" id="slide7">
+            <img src="imagens/igreja2.jpeg" alt="">
+        </label>
+
+        <label for="s8" id="slide8">
+            <img src="imagens/igreja3.jpeg" alt="">
+        </label>
+
+        <label for="s9" id="slide9">
+            <img src="imagens/igreja4.jpeg" alt="">
+        </label>
+
+        <label for="s10" id="slide10">
+            <img src="imagens/martire_cunhau_0.jpeg" alt="">
+        </label>
+    </div>
+
+    <div id="slider1">
+        <input type="radio" name="slider1" id="s1" checked>
+        <input type="radio" name="slider1" id="s2">
+        <input type="radio" name="slider1" id="s3">
+        <input type="radio" name="slider1" id="s4">
+        <input type="radio" name="slider1" id="s5">
+
+        <label for="s1" id="slide1">
+            <img src="imagens/martire_cunhau_1.jpeg" alt="">
+        </label>
+        <label for="s2" id="slide2">
+            <img src="imagens/martire_cunhau_2.jpeg" alt="">
+        </label>
+        <label for="s3" id="slide3">
+            <img src="imagens/martire_cunhau_6.jpeg" alt="">
+        </label>
+        <label for="s4" id="slide4">
+            <img src="imagens/martire_cunhau_7.jpeg" alt="">
+        </label>
+        <label for="s5" id="slide5">
+            <img src="imagens/martire_cunhau_8.jpeg" alt="">
+        </label>
 
     </div>
-    <!-- partial -->
 
-    <div class="container">
-        <div class="box">
-            <img src="imagens/martire_cunhau_0.jpeg">
-            <span>Registro de homenagem aos mortos - cruzes</span>
-        </div>
+    <div id="slider2">
+        <input type="radio" name="slider2" id="s11" checked>
+        <input type="radio" name="slider2" id="s12">
+        <input type="radio" name="slider2" id="s13">
+        <input type="radio" name="slider2" id="s14">
+        <input type="radio" name="slider2" id="s15">
 
-        <div class="box">
-            <img src="imagens/martire_cunhau_1.jpeg">
-            <span>Símbolo no interior da Igreja</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_2.jpeg">
-            <span>Estátua dos padres</span>
-        </div>
-
-
-    </div>
-    <!-- partial -->
-
-
-    <div class="container">
-
-
-        <div class="box">
-            <img src="imagens/martire_cunhau_6.jpeg">
-            <span>Fachada da Igreja</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_7.jpeg">
-            <span>Estátua de Anjo</span>
-        </div>
+        <label for="s11" id="slide11">
+            <img src="imagens/martire_cunhau_9.jpeg" alt="">
+        </label>
+        <label for="s12" id="slide12">
+            <img src="imagens/martire_cunhau_10.jpeg" alt="">
+        </label>
+        <label for="s13" id="slide13">
+            <img src="imagens/martire_cunhau_12.jpeg" alt="">
+        </label>
+        <label for="s14" id="slide14">
+            <img src="imagens/martire_cunhau_13.jpeg" alt="">
+        </label>
+        <label for="s15" id="slide15">
+            <img src="imagens/martire_cunhau_14.jpeg" alt="">
+        </label>
 
     </div>
-    <!-- partial -->
 
+    <div id="slider3">
+        <input type="radio" name="slider3" id="s16" checked>
+        <input type="radio" name="slider3" id="s17">
+        <input type="radio" name="slider3" id="s18">
+        <input type="radio" name="slider3" id="s19">
+        <input type="radio" name="slider3" id="s20">
 
-    <div class="container">
-        <div class="box">
-            <img src="imagens/martire_cunhau_8.jpeg">
-            <span>Estátua de Anjo</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/martire_cunhau_9.jpeg">
-            <span>Estátua de Anjo</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_10.jpeg">
-            <span>Interior da Igreja</span>
-        </div>
-
-
+        <label for="s16" id="slide16">
+            <img src="imagens/martire_cunhau_15.jpeg" alt="">
+        </label>
+        <label for="s17" id="slide17">
+            <img src="imagens/martire_cunhau_16.jpeg" alt="">
+        </label>
+        <label for="s18" id="slide18">
+            <img src="imagens/martire_cunhau_17.jpeg" alt="">
+        </label>
+        <label for="s19" id="slide19">
+            <img src="imagens/martire_cunhau_18.jpeg" alt="">
+        </label>
+        <label for="s20" id="slide20">
+            <img src="imagens/martire_cunhau_19.jpeg" alt="">
+        </label>
     </div>
-    <!-- partial -->
 
+    <div id="slider4">
+        <input type="radio" name="slider4" id="s21">
+        <input type="radio" name="slider4" id="s22">
+        <input type="radio" name="slider4" id="s23">
+        <input type="radio" name="slider4" id="s24">
+        <input type="radio" name="slider4" id="s25">
 
-    <div class="container">
-        <div class="box">
-            <img src="imagens/martire_cunhau_12.jpeg">
-            <span>Estátua em homenagem ao padre</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/martire_cunhau_13.jpeg">
-            <span>Estátua em homenagem ao padre</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_14.jpeg">
-            <span>Interior da Igreja</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_15.jpeg">
-            <span>Estátua</span>
-        </div>
-
+        <label for="s21" id="slide21">
+            <img src="imagens/martire_cunhau_20.jpeg" alt="">
+        </label>
+        <label for="s22" id="slide22">
+            <img src="imagens/martire_cunhau_21.jpeg" alt="">
+        </label>
+        <label for="s23" id="slide23">
+            <img src="imagens/martire_cunhau_22.jpeg" alt="">
+        </label>
+        <label for="s24" id="slide24">
+            <img src="imagens/martire_cunhau_23.jpeg" alt="">
+        </label>
+        <label for="s25" id="slide25">
+            <img src="imagens/martire_cunhau_25.jpeg" alt="">
+        </label>
     </div>
-    <!-- partial -->
 
-    <div class="container">
-        <div class="box">
-            <img src="imagens/martire_cunhau_16.jpeg">
-            <span>Placa</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/martire_cunhau_17.jpeg">
-            <span>Fachada da Capela</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_18.jpeg">
-            <span>Interior da Capela</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_19.jpeg">
-            <span>Interior da Capela</span>
-        </div>
-
-    </div>
-    <!-- partial -->
-
-    <div class="container">
-        <div class="box">
-            <img src="imagens/martire_cunhau_20.jpeg">
-            <span>Interior da Capela</span>
-        </div>
-
-        <div class="box">
-            <img src="imagens/martire_cunhau_21.jpeg">
-            <span>Interior da Capela</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_22.jpeg">
-            <span>Placa</span>
-        </div>
-        <div class="box">
-            <img src="imagens/martire_cunhau_23.jpeg">
-            <span>Placa - O Morticício de Cunhaú</span>
-        </div>
-
-
-    </div>
-    <!-- partial -->
-
-    <div class="container">
-
-
-        <div class="box">
-            <img src="imagens/martire_cunhau_25.jpeg">
-            <span>Placa informativa com QR CODE</span>
-        </div>
-        <div class="box">
-            <img class="" src="imagens/martire_cunhau_26.jpeg">
-            <span>Placa Informativa</span>
-        </div>
-
-
-    </div>
-    <!-- partial -->
 
     <div class="divider"></div>
 
@@ -251,6 +218,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#footer-placeholder").load("footer.html");
 });
+
 </script>
 
 

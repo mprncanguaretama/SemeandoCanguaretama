@@ -1,5 +1,6 @@
 
-#slider, #slider1, #slider2 {
+#slider, #slider1, #slider2, #slider3, #slider4
+{
     position: relative;
     width: 50%;
     height: 32vw;
@@ -32,8 +33,8 @@ input[type="radio"]:checked{
 opacity: 1;
 }
 
-#slider label, #slider1 label, #slider2 label,
-#slider label img, #slider1 label img, #slider2 label img
+#slider label, #slider1 label, #slider2 label, #slider3 label, #slider4 label,
+#slider label img, #slider1 label img, #slider2 label img, #slider3 label img, #slider4 label img
 {
 display: flex;
 position: absolute;
@@ -85,6 +86,26 @@ transform: translate3d(0%, 0, 0px);
 box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
 }
 
+/*Activition slide*/
+#s16:checked ~ #slide16,
+#s17:checked ~ #slide17,
+#s18:checked ~ #slide18,
+#s19:checked ~ #slide19,
+#s20:checked ~ #slide20{
+transform: translate3d(0%, 0, 0px);
+box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
+}
+
+
+/*Activition slide*/
+#s21:checked ~ #slide21,
+#s22:checked ~ #slide22,
+#s23:checked ~ #slide23,
+#s24:checked ~ #slide24,
+#s25:checked ~ #slide25{
+transform: translate3d(0%, 0, 0px);
+box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
+}
 
 
 /*Next Slide*/
@@ -116,6 +137,30 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
 #s13:checked ~ #slide14,
 #s14:checked ~ #slide15,
 #s15:checked ~ #slide11
+{
+transform: translate3d(20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+
+/*Next Slide*/
+#s16:checked ~ #slide17,
+#s17:checked ~ #slide18,
+#s18:checked ~ #slide19,
+#s19:checked ~ #slide20,
+#s20:checked ~ #slide16
+{
+transform: translate3d(20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+
+/*Next Slide*/
+#s21:checked ~ #slide22,
+#s22:checked ~ #slide23,
+#s23:checked ~ #slide24,
+#s24:checked ~ #slide25,
+#s25:checked ~ #slide21
 {
 transform: translate3d(20%, 0, -100px);
 box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
@@ -158,6 +203,28 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
 }
 
 
+/*Previous Slide*/
+#s16:checked ~ #slide20,
+#s17:checked ~ #slide16,
+#s18:checked ~ #slide17,
+#s19:checked ~ #slide18,
+#s20:checked ~ #slide19
+{
+transform: translate3d(-20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+
+/*Previous Slide*/
+#s21:checked ~ #slide25,
+#s22:checked ~ #slide21,
+#s23:checked ~ #slide22,
+#s24:checked ~ #slide23,
+#s25:checked ~ #slide24
+{
+transform: translate3d(-20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
 
 /*next to next*/
 #s1:checked ~ #slide3,
@@ -195,7 +262,27 @@ transform: translate3d(40%, 0, -250px);
 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
 }
 
+/*next to next*/
+#s16:checked ~ #slide18,
+#s17:checked ~ #slide19,
+#s18:checked ~ #slide20,
+#s19:checked ~ #slide16,
+#s20:checked ~ #slide17
+{
+transform: translate3d(40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
 
+
+#s21:checked ~ #slide23,
+#s22:checked ~ #slide24,
+#s23:checked ~ #slide25,
+#s24:checked ~ #slide21,
+#s25:checked ~ #slide22
+{
+transform: translate3d(40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
 
 
 /*previous to previous slide*/
@@ -222,13 +309,34 @@ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
 }
 
 
-
 /*previous to previous slide*/
 #s11:checked ~ #slide14,
 #s12:checked ~ #slide15,
 #s13:checked ~ #slide11,
 #s14:checked ~ #slide12,
 #s15:checked ~ #slide13
+{
+transform: translate3d(-40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
+
+/*previous to previous slide*/
+#s16:checked ~ #slide19,
+#s17:checked ~ #slide20,
+#s18:checked ~ #slide16,
+#s19:checked ~ #slide17,
+#s20:checked ~ #slide18
+{
+transform: translate3d(-40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
+
+/*previous to previous slide*/
+#s21:checked ~ #slide24,
+#s22:checked ~ #slide25,
+#s23:checked ~ #slide21,
+#s24:checked ~ #slide22,
+#s25:checked ~ #slide23
 {
 transform: translate3d(-40%, 0, -250px);
 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
