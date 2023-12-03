@@ -428,30 +428,28 @@ margin-top: 50px;
 
 .tooltip {
   visibility: hidden;
-  width: 200px;
+  width: 400px;
   background-color: #F5F3F3;
   color: black;
-  text-align: center;
+  text-align: justify; /* Justifica o texto dentro do tooltip */
   border-radius: 6px;
-  padding: 5px 0;
-  text-align: justify;
-  padding: 5px; /* Adiciona um pouco de padding interno para melhor legibilidade */
-  font-family: Arial, sans-serif; /* Define uma fonte legível */
-  line-height: 1.4; /* Um espaçamento de linha razoável para melhor legibilidade */
-  font-size: 22px; /*
-
+  padding: 20px; /* Espaçamento entre o texto e a borda da caixa */
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 22px;
 
   /* Posicionamento */
   position: absolute;
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -200px; /* Ajuste para centralizar o tooltip baseado na sua largura */
   opacity: 0;
 
   /* Transição para suavizar o aparecimento */
   transition: opacity 0.3s, visibility 0.3s;
 }
+
 
 .author {
   margin-top: 0.0em; /* Ajuste conforme necessário */
