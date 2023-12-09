@@ -101,10 +101,20 @@ $(document).ready(function(){
     <p> A Lagoa da Coca Cola fica localizada a aproximadamente 100km de Natal,
         situando-se no Município de Baía Formosa.</p>
 
-    <a href="https://www.google.com/maps?q=lagoa+da+coca+cola&source=lmns&entry=mc&bih=953&biw=1920&rlz=1C1VDKB_pt-PTBR1058BR1058&hl=pt-PT&sa=X&ved=2ahUKEwiCl4Lli9GCAxXkSLgEHWBBBzgQ0pQJKAJ6BAgBEAY"
-       target="_blank">
-        <img src="imagens/mapa_coca_cola.bmp" class="img_moldura_img_localizacao">
-    </a>
+        <div id="map"></div>
+
+        <script>
+            function initMap(){
+                    let lagoa = {lat: -6.41859, lng: -34.98961};
+                    let map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: barra_cunhau}
+                    );
+                    let marker = new google.maps.Marker({position: lagoa, map: map})} 
+            </script>
+    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+    
+
 
     <div class="divider"></div>
 

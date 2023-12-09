@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>🌎 Meio Ambiente - Canguaretama</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="./style.css">
+
     <link href="rafa-css.css" rel="stylesheet"/>
                 <link href="carrosel_3d.css" rel="stylesheet">
 
@@ -110,10 +110,25 @@ $(document).ready(function(){
     <h2>Onde fica?</h2>
     <p> O Bambuzal de Piquiri fica localizado a aproximadamente 100km de Natal,
         situando-se no Município de Canguaretama.</p>
-    <a href="https://www.google.com/maps/search/bambuzal+de+piquiri/@-6.4153342,-35.1803315,3196m/data=!3m1!1e3?entry=ttu"
-       target="_blank">
-        <img src="imagens/mapa_bambuzal_piquiri.bmp" class="img_moldura_img_localizacao">
-    </a>
+    
+        
+
+
+        <div id="map"></div>
+
+        <script>
+            function initMap(){
+                    let bambuzal = {lat: -6.41071, lng: -35.17433};
+                    let map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: bambuzal}
+                    );
+                    let marker = new google.maps.Marker({position: bambuzal, map: map})} 
+            </script>
+    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+    
+
+
 
     <div class="divider"></div>
 

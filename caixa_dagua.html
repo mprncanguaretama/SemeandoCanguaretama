@@ -77,10 +77,24 @@ $(document).ready(function(){
     <p> A antiga caixa d'água fica localizada a aproximadamente 100km de Natal,
         situando-se no Distrito de Piquiri, Município de Canguaretama.</p>
 
-    <a href="https://www.google.com/maps/place/Caixa+d'%C3%A1gua+da+Linha+de+Ferro/@-6.416545,-35.1851142,17z/data=!3m1!4b1!4m6!3m5!1s0x7ad7f86038b4171:0x2283e843a601dca5!8m2!3d-6.416545!4d-35.1825393!16s%2Fg%2F11gy44wg75?entry=ttu"
-       target="_blank">
-        <img src="imagens/img_loc_caixa_dagua.jpg" class="img_moldura_img_localizacao">
-    </a>
+   
+        <div id="map"></div>
+
+        <script>
+            function initMap(){
+                    let caixa_dagua = {lat: -6.41626, lng: -35.18259};
+                    let map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: caixa_dagua}
+                    );
+                    let marker = new google.maps.Marker({position: caixa_dagua, map: map})} 
+            </script>
+    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+    
+    
+
+
+    
     <div class="divider"></div>
 
 

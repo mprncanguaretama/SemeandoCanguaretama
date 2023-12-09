@@ -132,9 +132,20 @@ $(document).ready(function(){
     <h2>Onde fica?</h2>
     <p> O mirante de carnaúba do padre fica localizado a aproximadamente 100km de Natal,
         situando-se no Município de Pedro Velho</p>
-<a href="https://www.google.com/maps/search/mirante+carnauba+dos+padres+pedro+velho/@-6.4623749,-35.216304,14z?entry=ttu" target="_blank">
-    <img src="imagens/img_localizacao_mirante.jpg" class="img_moldura_img_localizacao" alt="Mirante Carnaúba dos Padres">
-</a>
+        <div id="map"></div>
+
+        <script>
+            function initMap(){
+                    let mirante_carnauba = {lat: -6.47367, lng: -35.20337};
+                    let map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: mirante_carnauba}
+                    );
+                    let marker = new google.maps.Marker({position: mirante_carnauba, map: map})} 
+            </script>
+    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+    
+
 
                             <div class="divider"></div>
 

@@ -147,10 +147,20 @@ $(document).ready(function(){
     <h2>Onde fica?</h2>
     <p> A antiga ponte ferroviária fica localizada a aproximadamente 100km de Natal,
         situando-se no Município de Pedro Velho</p>
-    <a href="https://www.google.com/maps/search/linha+ferrea+pedro+velho/@-6.4438889,-35.2382266,5374m/data=!3m1!1e3?entry=ttu"
-       target="https://www.google.com/maps/search/linha+ferrea+pedro+velho/@-6.4438889,-35.2382266,5374m/data=!3m1!1e3?entry=ttu">
-        <img src="imagens/img_loc_ponte_ferroviaria.jpg" class="img_moldura_img_localizacao">
-    </a>
+        <div id="map"></div>
+
+        <script>
+            function initMap(){
+                    let linha_ferrea = {lat: -6.44548, lng: -35.22515};
+                    let map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: linha_ferrea}
+                    );
+                    let marker = new google.maps.Marker({position: linha_ferrea, map: map})} 
+            </script>
+    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+    
+
     <div class="divider"></div>
 
 

@@ -534,3 +534,11 @@ margin-top: 50px;
         margin: 20px 0;
     }
 }
+
+
+#map {
+    height: 400px; /* ou qualquer outra altura */
+    width: 100%;
+  }
+  
+  
