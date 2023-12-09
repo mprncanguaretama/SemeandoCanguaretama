@@ -62,10 +62,20 @@ $(document).ready(function(){
     <p> O Rio Catú fica localizado a aproximadamente 100km de Natal,
         situando-se no Município de Canguaretama</p>
 
-    <a href="https://www.google.com/maps/search/rio+catu+canguare+tama/@-6.315493,-35.1762667,13z/data=!3m1!4b1?entry=ttu"
-       target="_blank">
-        <img src="imagens/img_localizacao_rio_catu.jpg" class="img_moldura_img_localizacao">
-    </a>
+     <div id="map"></div>
+
+    <script>
+        function initMap(){
+                let rio_catu = {lat: -6.27496, lng: -35.05395};
+                let map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 15, center: rio_catu}
+                );
+                let marker = new google.maps.Marker({position: rio_catu, map: map})}
+        </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+
+rio_catu
     <div class="divider"></div>
 
 

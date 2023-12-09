@@ -107,9 +107,23 @@ $(document).ready(function(){
   <h2 >Onde fica?</h2>
     <p> A senzala fica localizada a aproximadamente 100km de Natal,
         situando-se no Município de Vila Flor</p>
-    <a href="https://www.google.com/maps/place/Vila+Flor+-+RN/@-6.3152688,-35.076389,672m/data=!3m1!1e3!4m6!3m5!1s0x7b28363de737c99:0x45b3d1f024c2659f!8m2!3d-6.3148511!4d-35.0760726!16s%2Fm%2F09rx92c?entry=ttu" target="_blank">
-    <img src="imagens/img_localizacao_senzala.jpg" class="img_moldura_img_localizacao">
-</a>
+
+
+     <div id="map"></div>
+
+    <script>
+        function initMap(){
+                let senzala = {lat: -6.31555, lng: -35.07652};
+                let map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 15, center: senzala}
+                );
+                let marker = new google.maps.Marker({position: senzala, map: map})}
+        </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+
+
+
         <div class="divider"></div>
 
 
