@@ -1,0 +1,47 @@
+.video-carousel {
+    position: relative;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin: 20px auto; /* Centraliza o carrossel na página */
+    overflow: hidden;
+}
+
+.video-slides {
+    display: flex;
+    height: 900px;
+}
+
+.video-slide {
+    display: flex; /* Para centralizar o conteúdo do vídeo, se necessário */
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    width: 100%; /* Cada vídeo ocupa 100% da largura do carrossel */
+    flex-shrink: 0; /* Previne os vídeos de encolherem */
+}
+
+.video-slide iframe {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do slide */
+    height: calc(100vw / (16/9)); /* Altura calculada com base na relação de aspecto do vídeo */
+    max-height: 500px; /* Ou uma altura máxima que você preferir */
+}
+
+/* Botões para navegação */
+.slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 20px; /* Aumente o padding para dar mais espaço ao redor da seta */
+    font-size: 70px; /* Aumente o tamanho da fonte se a seta for um caractere de texto */
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

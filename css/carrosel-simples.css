@@ -1,7 +1,7 @@
 .carousel {
     position: relative;
-    max-width: 750px; /* Ajuste a largura conforme necessário */
-    height: 600px; /* Ajuste a altura conforme necessário */
+    max-width: 900px; /* Ajuste a largura conforme necessário */
+    height: 900px; /* Ajuste a altura conforme necessário */
     margin: auto;
     overflow: hidden;
 }
@@ -10,7 +10,7 @@
     width: auto; /* Permite que a largura da imagem se ajuste proporcionalmente */
     max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
     height: auto; /* Permite que a altura da imagem se ajuste proporcionalmente */
-    max-height: 600px; /* Altura máxima para as imagens */
+    max-height: 1000px; /* Altura máxima para as imagens */
     object-fit: scale-down; /* Ajusta a imagem para caber no contêiner sem cortar */
     display: block; /* Exibe a imagem */
     margin: auto; /* Centraliza a imagem no contêiner caso ela seja menor */
