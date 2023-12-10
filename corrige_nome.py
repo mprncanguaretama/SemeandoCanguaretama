@@ -1,10 +1,10 @@
 
 import os
 
-diretorio = r"C:\Users\User\Desktop\fotos"
+diretorio = r"F:\Users\rafae\PycharmProjects\html_aula\imagens\santuario_tartaruga"
 arquivos = os.listdir(diretorio)
 
-nome = "mirante"
+nome = "tartaruga"
 
 for i, arquivo in enumerate(arquivos):
     caminho_completo = os.path.join(diretorio, arquivo)
