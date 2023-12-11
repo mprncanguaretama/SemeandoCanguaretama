@@ -1,0 +1,118 @@
+#slider_video 
+{
+    position: relative;
+    width: 50%;
+    height: 32vw;
+    margin: 80px auto;
+    transform-style: preserve-3d;
+    font-family: "Helvetica Neue", sans-serif;
+    perspective: 1400px;
+    display: block; /* Adicionado para garantir que cada slider seja um bloco */
+}
+
+input[type="radio"]{
+position: relative;
+top: 108%;
+left: 50%;
+width: 18px;
+height: 18px;
+margin: 0 15px 0 0;
+transform: translateX(-83px);
+cursor: pointer;
+opacity: 0.4;
+}
+
+
+input[type="radio"]:nth-child(5){
+margin-right:0px;
+}
+
+
+input[type="radio"]:checked{
+opacity: 1;
+}
+
+#slider_video label, #slider_video label iframe{
+display: flex;
+position: absolute;
+top: 0;
+left: 0;
+align-items: center;
+justify-content:center;
+width: 100%;
+height: 100%;
+border-radius: 3px;
+color: white;
+font-size: 70px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 400ms ease;
+}
+
+
+
+/*Activition slide*/
+#s1_v:checked ~ #slide1_v,
+#s2_v:checked ~ #slide2_v,
+#s3_v:checked ~ #slide3_v,
+#s4_v:checked ~ #slide4_v,
+#s5_v:checked ~ #slide5_v{
+transform: translate3d(0%, 0, 0px);
+box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0,0,0,0.2)
+}
+
+
+
+
+/*Next Slide*/
+#s1_v:checked ~ #slide2_v,
+#s2_v:checked ~ #slide3_v,
+#s3_v:checked ~ #slide4_v,
+#s4_v:checked ~ #slide5_v,
+#s5_v:checked ~ #slide1_v
+{
+transform: translate3d(20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+
+
+
+
+/*Previous Slide*/
+#s1_v:checked ~ #slide5_v,
+#s2_v:checked ~ #slide1_v,
+#s3_v:checked ~ #slide2_v,
+#s4_v:checked ~ #slide3_v,
+#s5_v:checked ~ #slide4_v
+{
+transform: translate3d(-20%, 0, -100px);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0,0.2)
+}
+
+
+
+/*next to next*/
+#s1_v:checked ~ #slide3_v,
+#s2_v:checked ~ #slide4_v,
+#s3_v:checked ~ #slide5_v,
+#s4_v:checked ~ #slide1_v,
+#s5_v:checked ~ #slide2_v
+{
+transform: translate3d(40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
+
+
+
+/*previous to previous slide*/
+#s1_v:checked ~ #slide4_v,
+#s2_v:checked ~ #slide5_v,
+#s3_v:checked ~ #slide1_v,
+#s4_v:checked ~ #slide2_v,
+#s5_v:checked ~ #slide3_v
+{
+transform: translate3d(-40%, 0, -250px);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4)
+}
+

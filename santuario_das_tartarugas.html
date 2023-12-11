@@ -20,6 +20,9 @@
     <script src="js/carrosel-simples.js" type="text/javascript"></script>
     <script src="js/video-carrosel-simples.js" type="text/javascript"></script>
 
+    <link href="css/carrosel_3d_video.css" rel="stylesheet">
+
+
 
 
     
@@ -212,27 +215,52 @@ $(document).ready(function(){
 
 
        
-<h2>Confira vídeos do Santuário da Tartaruga</h2>
+<h2>Confira Vídeos do Santuário da Tartaruga</h2>
 
 <!-- Swiper -->
 
-<div class="video-carousel">
-    <div class="video-slides">
-        <iframe class="video-slide" src="https://www.youtube.com/embed/ZDunjZCqEsc" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video-slide" src="https://www.youtube.com/embed/8dvmvArt45w" frameborder="0" allowfullscreen></iframe>
-        <iframe class="video-slide" src="https://www.youtube.com/embed/uP9xpBUBzB8" frameborder="0" allowfullscreen></iframe>
-        <!-- Adicione mais iframes conforme necessário -->
-    </div>
-    <button class="slide-button prev" onclick="moveVideoSlide(-1)">❮</button>
-<button class="slide-button next" onclick="moveVideoSlide(1)">❯</button>
+<!--<div class="video-carousel">-->
+<!--    <div class="video-slides">-->
+<!--        <iframe class="video-slide" src="https://www.youtube.com/embed/ZDunjZCqEsc" frameborder="0" allowfullscreen></iframe>-->
+<!--        <iframe class="video-slide" src="https://www.youtube.com/embed/8dvmvArt45w" frameborder="0" allowfullscreen></iframe>-->
+<!--        <iframe class="video-slide" src="https://www.youtube.com/embed/uP9xpBUBzB8" frameborder="0" allowfullscreen></iframe>-->
+<!--        &lt;!&ndash; Adicione mais iframes conforme necessário &ndash;&gt;-->
+<!--    </div>-->
+<!--    <button class="slide-button prev" onclick="moveVideoSlide(-1)">❮</button>-->
+<!--<button class="slide-button next" onclick="moveVideoSlide(1)">❯</button>-->
 
-</div>
-    
+<!--</div>-->
+
     </center>
 
+<!--    <div class="divider"></div>-->
+
+    <div id="slider_video">
+        <input type="radio" name="slider_video" id="s1_v" checked>
+        <input type="radio" name="slider_video" id="s2_v">
+        <input type="radio" name="slider_video" id="s3_v">
+        <input type="radio" name="slider_video" id="s4_v">
+        <input type="radio" name="slider_video" id="s5_v">
+
+        <label for="s1_v" id="slide1_v">
+            <iframe class="video-slide" src="https://www.youtube.com/embed/ZDunjZCqEsc" frameborder="0" allowfullscreen></iframe>
+        </label>
+        <label for="s2_v" id="slide2_v">
+            <iframe class="video-slide" src="https://www.youtube.com/embed/8dvmvArt45w" frameborder="0" allowfullscreen></iframe>
+        </label>
+        <label for="s3_v" id="slide3_v">
+            <iframe class="video-slide" src="https://www.youtube.com/embed/uP9xpBUBzB8" frameborder="0" allowfullscreen></iframe>
+        </label>
+        <label for="s4_v" id="slide4_v">
+            <iframe class="video-slide" src="https://www.youtube.com/embed/8dvmvArt45w" frameborder="0" allowfullscreen></iframe>
+        </label>
+        <label for="s5_v" id="slide5_v">
+            <iframe class="video-slide" src="https://www.youtube.com/embed/uP9xpBUBzB8" frameborder="0" allowfullscreen></iframe>
+        </label>
+    </div>
+
+
     <div class="divider"></div>
-
-
 
 
     <h2>Onde fica?</h2>
