@@ -66,6 +66,21 @@ $(document).ready(function(){
 
     <h2>Onde fica?</h2>
 
+    <div id="map"></div>
+
+            <script>
+                function initMap(){
+                        let baia_formosa = {lat: -6.38193, lng: -35.1297};
+                        let map = new google.maps.Map(
+                            document.getElementById('map'), {zoom: 15, center: baia_formosa}
+                        );
+                        let marker = new google.maps.Marker({position: baia_formosa, map: map})} 
+                </script>
+
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+
+
+
 
             <div class="divider"></div>
 
