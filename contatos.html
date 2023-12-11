@@ -41,11 +41,30 @@ $(document).ready(function(){
                 <img id="img_localizacao" src="imagens/img_localizacao.png">
                 <p>Endereço: <b>Rua Princesa Isabel, nº 190, Centro, Canguaretama/RN. CEP 59.190-000</b></p>
             </li>
+
+            <div id="map"></div>
+
+            <script>
+                function initMap(){
+                        let baia_formosa = {lat: -6.37872, lng: -35.13142};
+                        let map = new google.maps.Map(
+                            document.getElementById('map'), {zoom: 15, center: baia_formosa}
+                        );
+                        let marker = new google.maps.Marker({position: baia_formosa, map: map})} 
+                </script>
+
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+
+
+
+
             <li class="contato_e_imagem">
                 <img id="img_horario_funcionamento" src="imagens/relogio-final.png">
-                <p>Horário de atendimento: De segunda a quinta-feira, das 08:00 às 17:00, na sexta-feira, das 08:00 às
-                    14:00 horas</p>
+                <p>Horário de atendimento: <b>De segunda a quinta-feira, das 08:00 às 17:00, na sexta-feira, das 08:00 às
+                    14:00 horas</b></p>
             </li>
+
+
 
 
         </ul>
@@ -53,7 +72,7 @@ $(document).ready(function(){
 
         <section class="section-rafa">
 
-            <h1 class="text-center"> Órgãos Ambientais e de Proteçãp</h1>
+            <h1 class="text-center"> Órgãos Ambientais e de Proteção</h1>
             <div style="margin-left: 50px">
                 <ul>
                     <li class="contato_e_imagem">
