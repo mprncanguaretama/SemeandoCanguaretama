@@ -1,0 +1,94 @@
+
+
+.containermapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Isso ajudará a centralizar o mapa */
+    justify-content: center; /* Isso também ajudará a centralizar o mapa verticalmente */    
+    margin: 100px; /* Isso removerá a margem de 200px que você tinha antes */
+height: 800px;  
+}
+
+
+
+
+.menu_nav_amb{
+
+margin-bottom: 20px;
+background-color: #4CAF50;
+border: none;
+border-radius: .3rem;
+text-align: center;
+text-decoration: none;
+font-size: 30px;
+font-weight: bold;
+font-family:  Arial, sans-serif;
+cursor: pointer;
+}
+ 
+
+.menu_nav_amb a:hover {
+    background-image: linear-gradient(120deg, #155799, #159957);
+    color: white !important; /* Garante que a cor do texto seja branca no hover */
+    transition: color 0s; /* Transição instantânea para a cor do texto no hover */
+
+}
+
+
+.menu_nav_amb a:active {
+    /* Define um novo estilo de fundo para o efeito de clique */
+    background-image: linear-gradient(120deg, #143D6B, #137B47);
+  
+    /* Pode adicionar uma transformação para dar uma sensação de pressão */
+    transform: translateY(8px);
+  }
+
+
+
+.img_popup{
+    width:300px;
+    height:300px
+}
+
+
+
+
+}
+
+
+
+
+#descricao_espaco {
+    max-width: auto;
+    margin: 100px;
+    padding: 100px;
+    height: auto;
+}
+
+
+
+
+#descricao_espaco{
+background: #fff;
+font-size: 40px;
+font-weight: 400;
+font-family:  Arial, sans-serif;
+text-align: justify;
+margin: 100px;
+padding: 100px;
+border-radius: 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra mais escura e mais dispersa */
+transition: transform 0.3s ease;
+}
+#descricao_espaco:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* sombra maior no hover para um efeito "levantado" */
+
+}
+
+
+@media (max-width: 768px) {
+    #descricao_espaco {
+margin: 20px 0;
+}
+}

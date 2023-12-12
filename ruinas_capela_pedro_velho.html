@@ -13,6 +13,7 @@
         <link href="carrosel_3d.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
 
 
@@ -33,8 +34,14 @@ $(document).ready(function(){
 
 <main>
     <h1 class="text-center">
-        Antigas Ruínas da Capela
+        Antigas Ruínas da Igreja de Santa Rita de Cássia
     </h1>
+
+    <h2> Conheça as Ruínas da antiga Igreja de Santa Rita de Cássia em Pedro Velho</h2>
+
+        <p>Única edificação que sobreviveu a enchente do rio Curimataú, em 1901, que destruiu totalmente a antiga Vila de Cuitezeiras. Conta a história que a igreja abrigou os moradores durante a tragédia, salvando suas vidas. A construção marca o início da Vila (1861), que veio a se tornar a atual Pedro Velho. Construída em estilo Barroco, concluída por volta de 1862, guarda também um obelisco e o antigo cemitério da Vila, emancipada de Canguaretama.</p>
+
+
 
         <div class="divider"></div>
 <h2>Registros Fotográficos das antigas ruínas da capela</h2>
@@ -96,9 +103,13 @@ $(document).ready(function(){
     </div>
 
 
+     <div class="divider"></div>
+
+    <center>
+            <h2>Vídeos das Ruínas da Igreja Santa Rita de Cássia</h2>
+<iframe width="745" height="419" src="https://www.youtube.com/embed/LP6LKko-VLo" title="Pedro Velho -RN Ruínas da Igreja Santa Rita de Cássia,Árvore Pau Grande e Mirante do Cristo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    </center>
+
         <div class="divider"></div>
-
-
 
 
     <section class="return">
@@ -106,6 +117,26 @@ $(document).ready(function(){
 
     </section>
 
+
+     <div class="divider"></div>
+    <h2>Onde fica?</h2>
+    <p> AS Ruínas da Igreja de Santa Rita de Cássia ficam localizadas a aproximadamente 100km de Natal,
+        situando-se no Município de Pedro Velho</p>
+
+     <div id="map"></div>
+
+    <script>
+        function initMap(){
+                let ruinas = {lat: -6.43946, lng: -35.21700};
+                let map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 15, center: ruinas}
+                );
+                let marker = new google.maps.Marker({position: ruinas, map: map})}
+        </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+
+    <div class="divider"></div>
 
 </main>
 

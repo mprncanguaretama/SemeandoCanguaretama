@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🌎 Meio Ambiente - Canguaretama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link href="rafa-css.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+
+    <link href="css/mapa_ambi.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<div id="header-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#header-placeholder").load("header.html");
+});
+
+
+</script>
+
+
+<body>
+
+<h1 class="text-center">
+    MAPA AMBIENTAL
+</h1>
+
+
+<div class="containermapa">
+    <div class="menu_nav_amb">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.37301, -35.0094">Baía Formosa</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.41071, -35.17433">Bambuzal de Piquiri</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.31907, -35.04834">Barra de Cunhaú</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.41626, -35.18259">Caixa D'Água</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.41032, -35.16472">Capela de Nossa Senhora das Candeias</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.30280, -35.03699">Fortim de Barra do Cunhaú</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.44013, -35.21616">Samaumeira</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.34741, -35.16459">Gruta do Bode</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.41859, -34.98961">Lagoa da Coca Cola</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.44548, -35.22515">Linha Férrea</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.47367, -35.20337">Mirante Carnaúba do
+                        Padre</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.27496, -35.05395">Rio Catu</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.43946, -35.21700">Ruínas da Igreja de Santa
+                        Rita
+                        de Cássia</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.39572, -34.98572">Santuário das Tartarugas</a>
+                    <a class="nav-item nav-link" href="#" data-latlng="-6.31555, -35.07652">Senzala de Pedro Velho</a>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </div>
+
+
+    <div id="map" style="height: 1600px;"></div>
+
+
+    <script>
+        var map = L.map('map').setView([-6.38193, -35.1297], 12); //
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+
+        var locais = [
+            {nome: "Baía Formosa",  latlng : [-6.37301, -35.0094], img: "imagens/baia_formosa_0.jpeg"},
+            {nome: "Bambuzal de Piquiri", latlng: [-6.41071, -35.17433], img: "imagens/bambuzal1.jpg"},
+            {nome: "Barra de Cunhaú", latlng: [-6.31907, -35.04834], img: "imagens/entrada_barra1.jpeg"},
+            {nome: "Caixa D'Água", latlng: [-6.41626, -35.18259], img: "imagens/caixa_dagua_0.jpeg"},
+            {nome: "Capela", latlng: [ -6.41032, -35.16472], img: "imagens/igreja3.jpeg"},
+            {nome: "Fortim de Barra do Cunhaú", latlng: [ -6.30280, -35.03699], img: "imagens/placa_historia.jpeg"},
+            {nome: "Samaumeira", latlng: [ -6.44013, -35.21616], img: "imagens/arvore2.jpeg"},
+            {nome: "Gruta do Bode", latlng: [ -6.34741, -35.16459], img: "imagens/g9.jpeg"},
+            {nome: "Lagoa da Coca Cola", latlng: [ -6.41859, -34.98961], img: "imagens/coca1.jfif"},
+            {nome: "Linha Férrea", latlng: [ -6.44548, -35.22515], img: "imagens/linha_ferrea_7.jpeg"},
+            {nome: "Mirante Carnaúba do Padre", latlng: [ -6.47367, -35.20337], img: "imagens/mirante_4.jpeg"},
+            {nome: "Rio Catu", latlng: [ -6.27496, -35.05395], img: "imagens/rio_catu.jpg"},
+            {nome: "Ruínas da Igreja de Santa Rita de Cássia", latlng: [ -6.43946, -35.21700], img: "imagens/ruinas1.jpeg"},
+            {nome: "Santuário das Tartarugas", latlng: [ -6.39572, -34.98572], img: "imagens/santuario_tartaruga/tartaruga_48.jpeg"},
+            {nome: "Senzala de Pedro Velho", latlng: [ -6.31555, -35.07652], img: "imagens/senzala6.jpeg"},
+        ];
+
+        locais.forEach(function(local)
+        {
+            var marker = L.marker(local.latlng).addTo(map); // Exemplo de marcador
+            marker.bindPopup(local.nome).openPopup();
+            marker.bindPopup('<img class="img_popup" src="'+local.img+'" alt="Imagem"><br>'+local.nome);
+         
+            
+        })         
+
+
+    </script>
+    </div>
+
+
+<div id="descricao_espaco">Escolha um local no menu acima para conhecer a História</div>
+
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+$(document).ready(function(){
+    $("#footer-placeholder").load("footer.html");
+});
+
+
+</script>
+
+
+</body>
+
+<script>
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+    navLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        var latlng = this.getAttribute('data-latlng').split(', ');
+        var lat = parseFloat(latlng[0]);
+        var lng = parseFloat(latlng[1]);
+        map.setView([lat, lng], 15);
+    });
+});
+
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var textosPorBotao = [
+            { nome: "Baía Formosa", texto: "Baía Formosa, situada no litoral do Rio Grande do Norte, Brasil, é uma praia que encanta a todos com sua beleza natural deslumbrante e atmosfera tranquila. Este paraíso tropical é famoso por suas águas cristalinas e areias brancas, proporcionando um cenário idílico para quem busca paz e relaxamento. O nome `Baía Formosa` é uma homenagem à sua beleza natural inigualável, que se estende ao longo de um litoral pontilhado de coqueiros e vegetação nativa exuberante. A praia de Baía Formosa é mais do que apenas um destino de beleza estonteante; é também um refúgio para a vida selvagem. A área é conhecida por abrigar uma rica biodiversidade, incluindo diversas espécies de aves marinhas e até mesmo tartarugas que escolhem suas areias para a desova. Além disso, a região é circundada por ecossistemas únicos, como manguezais e a Mata Estrela, a maior reserva de mata atlântica do estado. Essa combinação de praias virgens e ecossistemas intocados torna Baía Formosa um lugar especial para os amantes da natureza e da vida selvagem. Além das suas qualidades naturais, Baía Formosa oferece uma experiência cultural rica. A pequena vila de pescadores, que ainda mantém muitas de suas tradições e um modo de vida simples, proporciona um vislumbre autêntico da cultura local. Os visitantes podem desfrutar de frutos do mar frescos, pescados nas águas locais, e participar de eventos culturais que frequentemente ocorrem na comunidade. Essa interação com os moradores locais e a imersão em seu estilo de vida acrescentam uma dimensão única à experiência de visitar esta magnífica praia brasileira." },
+            { nome: "Bambuzal de Piquiri", texto: "O Bambuzal de Piquiri é uma paisagem natural marcante que se destaca por sua tranquilidade e beleza. Situado na região costeira, o bambuzal é um ecossistema único, onde o som suave do vento que passa pelas folhas longas e estreitas dos bambus cria uma melodia relaxante, quase meditativa. Este ambiente oferece um refúgio sereno longe do burburinho da vida cotidiana marcando a proximidade para com o distrito de piquiri, convidando visitantes a se desconectar e reconectar com a natureza.O crescimento dos bambus no Piquiri é um espetáculo à parte, com suas alturas impressionantes que parecem tocar o céu e o padrão rítmico dos caules que formam um portal natural. Além de sua importância ecológica, o Bambuzal de Piquiri também possui um valor cultural e histórico para a região. Tradicionalmente, o bambu tem sido utilizado em várias facetas da vida cotidiana, desde a construção até a fabricação de utensílios e instrumentos musicais. O bambuzal se torna um local de aprendizado, onde as gerações mais novas podem aprender sobre práticas sustentáveis e o uso consciente dos recursos naturais. Visitantes e estudiosos interessados na cultura local frequentemente visitam o bambuzal, buscando inspiração, conhecimento e uma conexão mais profunda com as tradições da terra." },
+            { nome: "Barra de Cunhaú", texto: "Barra de Cunhaú, localizada no litoral sul do Rio Grande do Norte, Brasil, é um destino de rara beleza e tranquilidade, que fascina todos os seus visitantes. Esta pitoresca vila de pescadores é abençoada com um ambiente natural deslumbrante, composto por águas cristalinas, vastos coqueirais e praias de areia branca e fina, que se estendem até onde a vista alcança.   O que realmente distingue Barra de Cunhaú de outros destinos turísticos é a sua atmosfera pacífica e intocada. Longe do burburinho das grandes cidades, aqui, o tempo parece desacelerar, permitindo aos visitantes um verdadeiro retiro da rotina agitada. As águas calmas do rio Cunhaú convergem com o mar, criando um espetáculo natural único, ideal para práticas de esportes aquáticos como kitesurf e stand-up paddle. Além das atividades aquáticas, Barra de Cunhaú também é um lugar perfeito para quem busca relaxar e se reconectar com a natureza. As caminhadas pelas praias quase desertas proporcionam um sentimento de paz e isolamento, raro de se encontrar. Para os amantes da natureza, os manguezais próximos são um ecossistema rico e vital, oferecendo oportunidades para passeios de barco e observação da fauna local, incluindo diversas espécies de pássaros. A culinária local é outro ponto alto, com ênfase em frutos do mar frescos, que são uma especialidade da região. Peixes, camarões e caranguejos são preparados de maneira tradicional, refletindo a herança cultural da região. Os restaurantes e barracas à beira-mar oferecem não apenas pratos deliciosos, mas também vistas espetaculares, especialmente durante o pôr do sol. Barra de Cunhaú não é apenas um destino turístico, mas um refúgio para a alma. A combinação de sua beleza natural serena, atividades ao ar livre e a hospitalidade calorosa de seus habitantes fazem deste lugar um verdadeiro paraíso tropical, um tesouro escondido esperando para ser descoberto." },
+            {nome: "Caixa D'Água", texto: "A caixa d'água situada em Piquiri, uma pequena localidade no Brasil, possui um significado histórico particularmente interessante, destacando-se como um marco da era ferroviária na região. Construída para servir a linha férrea que atravessava a localidade, esta estrutura era essencial para o abastecimento de água das locomotivas a vapor, que dependiam fortemente dela para suas operações diárias. A caixa d'água, erguida com robustez e projetada para armazenar grandes volumes de água, era um ponto vital na rota da ferrovia, assegurando que as locomotivas pudessem continuar suas viagens pelos vastos trilhos que conectavam diferentes partes do país. Além de sua funcionalidade, a caixa d'água de Piquiri também é um símbolo da herança cultural e industrial da região. Ela serve como um lembrete tangível do período em que as ferrovias eram a espinha dorsal do transporte e do comércio, desempenhando um papel crucial no desenvolvimento econômico local e na conectividade. Hoje, embora as locomotivas a vapor tenham se tornado parte da história, a caixa d'água permanece como um testemunho silencioso de uma época passada, atraindo interesse tanto de entusiastas da história ferroviária quanto de visitantes curiosos que buscam conectar-se com o passado da região. A preservação dessa estrutura não apenas homenageia a história ferroviária, mas também oferece uma janela única para as gerações futuras compreenderem melhor a evolução dos meios de transporte e a história local."},
+            {nome: "Capela de Nossa Senhora das Candeias", texto: "A Capela de Nossa Senhora das Candeias, em Cunhaú, no Rio Grande do Norte, Brasil, é um local de profunda significância histórica e religiosa, especialmente relacionada ao episódio conhecido como os 'Mártires de Cunhaú'. Este trágico evento ocorreu em 16 de julho de 1645, durante o período de ocupação holandesa no Nordeste brasileiro.Nesse dia, enquanto um grupo de fiéis católicos participava da missa dominical, soldados holandeses e seus aliados indígenas invadiram a capela. O padre André de Soveral, o celebrante da missa, juntamente com os fiéis, foram brutalmente atacados e martirizados por causa de sua fé. Este ato de violência contra os católicos é um dos episódios mais sombrios e dolorosos da história religiosa do Brasil. A Capela de Nossa Senhora das Candeias, por sua associação com este evento, tornou-se um local de peregrinação e reverência, simbolizando a resistência e a fé inabalável dos mártires. Ela serve como um memorial vivo, onde os visitantes podem refletir sobre a história e buscar inspiração na coragem e devoção demonstradas pelos Mártires de Cunhaú. Este local não é apenas um marco histórico, mas também um símbolo da resiliência do espírito humano e da capacidade de manter a fé em tempos de adversidade. A história dos Mártires de Cunhaú continua a ressoar com muitos, e a Capela de Nossa Senhora das Candeias permanece um testemunho eterno de sua memória e legado."},
+        
+            {nome: "Fortim de Barra do Cunhaú", texto: "O Fortim da Barra do Cunhaú foi edificado por marinheiros de Dunquerque, que estiveram no local devido ao encalhe de sua embarcação. Provavelmente em meados do século XVI, a presença de franceses no litoral do Rio Grande do Norte era comum. Foram forçados a permanecer na região por mais tempo do que o previsto, aguardando auxílio. O Fortim possuía dez canhões de balas de cinco libras e dois arcabuzes de foquilha, resguardados em um fosso circundado por paliçada. Apresentava formato quadrangular e duplo, com muralhas que atingiam até três metros de altura. Posicionado na encosta de uma elevação, serviu como defesa para o Engenho Cunhaú, localizado a uma distância de aproximadamente dezoito quilômetros. Em uma segunda tentativa, os holandeses se organizaram melhor. O Conselheiro Stachouwer partiu do Forte Coulen, navegando em direção à Barra do Cunhaú. Paralelamente, o Coronel Cristóforos Arciszewski liderou por terra uma tropa composta por 220 soldados e 50 índios. O Fortim foi atacado de surpresa durante a noite de 21 para 22 de outubro. A despeito dos alertas dos cães, os holandeses aproveitaram a escuridão da noite de sábado, último dia de lua minguante, e realizaram um ataque rápido e violento, conquistando o forte. A defesa contra os invasores holandeses ocorreu no início de abril de 1634, mas a guarnição conseguiu reagir de forma eficaz, frustrando a investida. Alguns moradores foram cruelmente degolados durante o ataque. A guarnição, sob o comando do  Capitão Álvaro Fragoso de Albuquerque e composta por 27 homens, mobilizou-se para confrontar o inimigo, que acabou recuando. Desde dezembro de 1633, os holandeses já estavam estabelecidos em Natal. Dominavam a Fortaleza dos Reis Magos e aspiravam conquistar o Engenho Cunhaú. Ao sair, os holandeses levaram tudo de valor que conseguiram reunir. Entretanto, a embarcação naufragou na saída da Barra. O tempo apagou tudo o que restou do Fortim da Barra. Até mesmo sua localização exata não pode ser confirmada com precisão. Hoje, resta apenas uma lembrança distante da crueldade da batalha e das riquezas saqueadas, que se transformaram em lenda no imaginário popular. (GALVÃO NETO, Francisco Alves."},
+            {nome: "Samaumeira", texto: "A grande árvore de Pedro Velho, frequentemente referida como um símbolo vivo de força e resistência, é uma presença majestosa e marcante na paisagem local. Este gigante verde, com seus galhos robustos e folhagem densa, ergue-se como um guardião do tempo, testemunhando a passagem das estações e das gerações na região. Com raízes que se estendem profundamente no solo fértil, a árvore não é apenas um marco físico, mas também um ponto de referência cultural e histórico para a comunidade de Pedro Velho. Sua copa imensa oferece sombra generosa, tornando-a um ponto de encontro natural para moradores e visitantes, que, ao longo dos anos, encontraram repouso e refúgio sob seu manto verde. A árvore é o local de muitas histórias compartilhadas, risadas e momentos de silêncio contemplativo, entrelaçando-se com a vida cotidiana da cidade e suas tradições. Além de seu significado social, a grande árvore também desempenha um papel ecológico vital. Ela serve como habitat para diversas espécies de aves e pequenos animais, contribuindo para a biodiversidade do ecossistema local. Suas raízes ajudam a manter a saúde do solo, enquanto suas folhas desempenham uma parte crucial no ciclo de oxigênio e carbono, sublinhando a interconexão entre a natureza e a vida humana. A Samaumeira de Pedro Velho é mais do que uma entidade isolada; ela é uma parte integrante da identidade da cidade, um emblema de sua herança ambiental e um lembrete constante da importância da conservação e do respeito pela natureza. Como um farol de sabedoria e beleza, a grande árvore permanece firme, um monumento natural para as futuras gerações admirarem e preservarem."},
+
+
+            {nome: "Gruta do Bode", texto: "A Gruta do Bode, localizada próximo à cidade de Canguaretama, no Rio Grande do Norte, guarda em suas entranhas histórias que se entrelaçam com a lenda e a realidade, formando um mosaico de narrativas que povoam o imaginário local. Conhecida também como 'Caverna das Sete Bocas' ou 'As Sete Bocas do Inferno', essa formação geológica tem sido, ao longo dos anos, fonte de mistério e objeto de curiosidade e respeito por parte dos moradores da região. As sete entradas da gruta convidam os mais corajosos a explorar o que há dentro, mas são poucos os que se aventuram em suas profundezas. A vegetação densa e o aspecto quase intransponível do terreno ao redor adicionam uma camada de isolamento e segredo ao local. Morcegos de variados tamanhos tomam o interior escuro da caverna como refúgio, voando por entre as entradas e acrescentando um elemento de vida selvagem ao cenário. A tradição oral de Canguaretama traz à tona relatos de que foram os holandeses, durante seu período de ocupação no Nordeste, que construíram ou utilizaram a gruta para fins ainda hoje desconhecidos. As histórias dos residentes mais antigos misturam acontecimentos reais com elementos sobrenaturais, como aparições de fantasmas de antigos escravos e senhores que, segundo dizem, vagam pelas redondezas como almas penadas. Além dos relatos sobrenaturais, a Gruta do Bode também é envolta em histórias de tesouros enterrados. Conta-se que na época da resistência contra os holandeses, um homem chamado Arcoverde, temendo a cobiça dos invasores por seu ouro, ordenou a um de seus escravos que enterrasse sua fortuna nas proximidades da gruta. Sob o manto da noite, o trabalho foi feito, mas o segredo da localização exata do ouro foi levado para o túmulo pelo próprio Arcoverde e seu escravo, em um trágico e misterioso fim que envolve veneno e morte súbita. A caverna e suas lendas continuam a ser parte integrante da história de Canguaretama, atraindo a atenção de historiadores e curiosos. Mesmo que estudos mais recentes apontem para origens pré-históricas das escavações, relacionadas à busca de pedras pelos indígenas da região, a Gruta do Bode permanece como um fascinante ponto de interseção entre o passado e o presente, um lugar onde a história se torna lenda e a lenda se torna história."},
+
+             {nome: "Lagoa da Coca Cola", texto: "A Lagoa da Coca Cola é uma exuberante maravilha natural que desperta a curiosidade de moradores e turistas por seu nome inusitado e suas águas de tonalidades distintas. Situada em um contexto de rica biodiversidade, a lagoa recebe seu apelido peculiar devido à cor escura de suas águas, que lembram o famoso refrigerante, um fenômeno que se deve à alta concentração de iodo e ferro, além da presença de matéria orgânica decomposta, que juntos, filtram a luz solar e dão à lagoa sua cor característica. Essa lagoa não é apenas um ponto de interesse turístico por sua beleza única, mas também um ecossistema valioso que sustenta uma variedade de espécies aquáticas e terrestres. Suas margens são cercadas por vegetação nativa, que ajuda a proteger as águas e oferece habitat para uma variedade de aves, insetos e pequenos mamíferos. O contraste entre a coloração escura da água e o verde vibrante da flora circundante cria um espetáculo visual que encanta a todos que a visitam. Além de sua importância ecológica, a Lagoa da Coca Cola também é um local propício para atividades recreativas e de lazer. Visitantes podem desfrutar de passeios de caiaque e canoa, explorando as tranquilas águas e observando a vida selvagem. Para aqueles interessados em relaxar, suas margens oferecem o local perfeito para piqueniques e momentos de descanso, onde se pode absorver a serenidade do ambiente. No entanto, a lagoa não é apenas um destino de lazer; ela tem um papel educativo importante. É um recurso natural que pode ensinar lições valiosas sobre ecologia, conservação e a importância da preservação de ecossistemas únicos. Além disso, o mistério por trás da coloração de suas águas pode servir de estímulo para a curiosidade científica e a investigação ambiental. Apesar de seu nome curioso, a Lagoa da Coca Cola é muito mais do que uma simples atração: é um lembrete da beleza e complexidade do mundo natural, e da necessidade de proteger tais locais para as gerações futuras. É um pedaço do paraíso na Terra que convida a uma reflexão mais profunda sobre nossa relação com o ambiente e o impacto que podemos ter sobre ele."},
+
+
+             {nome: "Linha Férrea", texto: "A antiga linha férrea de Pedro Velho é um fragmento da história do desenvolvimento do transporte e da expansão econômica no Brasil. Remanescente da época em que o zumbido das locomotivas era um sinal de progresso e modernidade, esta linha férrea é um eco dos dias em que o ferro e o vapor eram as artérias que ligavam cidades e povoados, impulsionando a troca de mercadorias e a mobilidade das pessoas. Construída em um período onde a indústria ferroviária estava em seu auge, a linha de Pedro Velho servia como um importante meio de comunicação e comércio entre as regiões interiores e as cidades costeiras. Foi por meio dela que muitos produtos, como o café, açúcar e outros bens agrícolas, encontraram seu caminho para os portos e, consequentemente, para mercados distantes, enquanto suprimentos e novidades chegavam às comunidades locais. A linha férrea não era apenas uma realização de engenharia ou um empreendimento econômico; era uma força social e cultural. Os trens e as estações eram pontos de encontro, locais onde histórias eram compartilhadas e onde as notícias viajavam tão rapidamente quanto as pessoas. A ferrovia ajudou a moldar a identidade das localidades por onde passava, influenciando os ritmos da vida cotidiana e tornando-se uma parte inesquecível da memória coletiva. Hoje, a antiga linha férrea de Pedro Velho pode estar silenciosa, seus trilhos e dormentes consumidos pelo tempo, mas sua presença ainda ressoa na região. Para alguns, ela é um lembrete nostálgico de uma era passada; para outros, um símbolo da necessidade de preservar nosso patrimônio histórico. As histórias e as lembranças associadas a essa linha férrea são inestimáveis, e a preservação desses resquícios do passado é crucial para entendermos a trajetória de desenvolvimento da região e para mantermos a conexão com nossas raízes históricas. Embora a linha férrea de Pedro Velho não opere mais, a sua memória convida a comunidade a refletir sobre o impacto duradouro que a ferrovia teve sobre o crescimento e a estrutura da cidade e das áreas circunvizinhas, agindo como uma ponte para a compreensão de um passado notável e uma inspiração para o futuro."},
+
+
+
+        
+        ];
+
+        var menuItems = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        menuItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento padrão do link
+                
+                var nomeBotao = this.textContent; // Ou this.innerText dependendo do seu HTML
+                var textoCorrespondente = textosPorBotao.find(function(obj) {
+                    return obj.nome === nomeBotao;
+                }).texto;
+                
+                var descricao = document.querySelector('#descricao_espaco');
+                descricao.textContent = textoCorrespondente;
+            });
+        });
+    });
+</script>
+
+
+</html>
