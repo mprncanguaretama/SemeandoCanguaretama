@@ -540,5 +540,39 @@ margin-top: 50px;
     height: 400px; /* ou qualquer outra altura */
     width: 100%;
   }
-  
-  
+
+
+@media screen and (max-width: 768px) {
+.img_moldura, .img_moldura_maior, .img_moldura_img_localizacao {
+    width: 100%; /* Ajuste a largura para ocupar toda a largura da tela */
+    height: auto; /* Mantenha a proporção da imagem */
+}
+
+h1, h2, .texto, p {
+    font-size: 18pt; /* Ajuste conforme necessário para telas menores */
+}
+
+.box, .texto, p, h1, h2 {
+    margin: 25px 50px; /* Reduza as margens para melhor uso do espaço */
+}
+
+.container, .contato_e_imagem {
+    flex-direction: column; /* Empilhe os elementos verticalmente */
+}
+
+header, #footer_background {
+    height: auto; /* Ajuste a altura para ocupar menos espaço na tela */
+}
+
+.carousel-container {
+    width: 100%; /* O carrossel ocupa mais espaço em telas menores */
+}
+
+.carousel-container .carousel-item {
+    height: 300px; /* Altura ajustada para visualização em telas menores */
+}
+
+.carousel-container .carousel-item img {
+    height: 300px; /* Altura correspondente para as imagens */
+}
+}
