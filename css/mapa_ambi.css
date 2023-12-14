@@ -5,7 +5,11 @@
     flex-direction: column;
     align-items: center; /* Isso ajudará a centralizar o mapa */
     justify-content: center; /* Isso também ajudará a centralizar o mapa verticalmente */    
-    margin: 50px; /* Isso removerá a margem de 200px que você tinha antes */
+    margin-top: 50px; /* Isso removerá a margem de 200px que você tinha antes */  
+    margin-bottom: 50px; /* Isso removerá a margem de 200px que você tinha antes */  
+    margin-left: 400px;
+    margin-right: 400px;
+    
     height: 70vh;  
     min-height: 50vh; /* Valor mínimo da altura */
 
