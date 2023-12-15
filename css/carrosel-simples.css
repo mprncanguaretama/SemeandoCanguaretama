@@ -6,6 +6,8 @@
     overflow: hidden;
 }
 
+
+
 .carousel-images img {
     width: auto; /* Permite que a largura da imagem se ajuste proporcionalmente */
     max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
@@ -14,11 +16,15 @@
     object-fit: scale-down; /* Ajusta a imagem para caber no contêiner sem cortar */
     display: block; /* Exibe a imagem */
     margin: auto; /* Centraliza a imagem no contêiner caso ela seja menor */
+
+    
 }
 
 
 .carousel-images img.active {
     display: block;
+
+    
 }
 
 button.prev, button.next {
@@ -31,7 +37,11 @@ button.prev, button.next {
     cursor: pointer;
     padding: 10px;
     z-index: 100;
+       
+    
 }
 
 button.prev { left: 10px; }
 button.next { right: 10px; }
+
+
