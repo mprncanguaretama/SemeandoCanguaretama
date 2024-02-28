@@ -1,0 +1,41 @@
+
+
+#selecao_menu {
+    width: 800px;
+    margin: 50px auto; /* Centraliza o select horizontalmente */
+    padding: 10px 15px; /* Adiciona um pouco de espaço interno */
+    font-size: 16px; /* Tamanho da fonte maior para melhor leitura */
+    border: 1px solid #ccc; /* Uma borda sutil */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Uma leve sombra para profundidade */
+    appearance: none; /* Remove a aparência padrão do navegador */
+    -webkit-appearance: none; /* Necessário para navegadores WebKit como Safari */
+    -moz-appearance: none; /* Necessário para o Firefox */
+    background-color: #fff; /* Fundo branco */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilo para o ícone de seta para baixo (você precisará de uma imagem ou pode criar com CSS) */
+#selecao_menu {
+    background-image: url('../icones/arrow_down.png') no-repeat right 10px center;    
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px; /* Tamanho do ícone */
+    -webkit-appearance: none; /* Removes default styling for select dropdown in WebKit browsers */
+    -moz-appearance: none; /* Removes default styling for select dropdown in Mozilla browsers */
+    appearance: none; /* 
+}
+
+/* Estilo para quando o usuário passa o mouse sobre o select */
+#selecao_menu:hover {
+    border-color: #888; /* Muda a cor da borda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Uma leve sombra para profundidade */
+
+}
+
+/* Estilo para quando o select está focado (usuário clicou ou usou a tabulação para selecioná-lo) */
+#selecao_menu:focus {
+    border-color: #555; /* Cor da borda mais escura para foco */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Uma sombra externa para destacar o foco */
+    outline: none; /* Remove o contorno padrão do navegador */
+}

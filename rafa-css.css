@@ -1,13 +1,4 @@
 
-#novo_background {
-    background-color: #159957;
-    background-image: linear-gradient(120deg, #155799, #159957);
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Um valor alto de z-index para garantir que o cabeçalho fique acima de outros elementos */
-
-}
 
 #footer_background {
     background-color: #159957;

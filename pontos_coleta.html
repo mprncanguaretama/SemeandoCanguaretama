@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🌎 Meio Ambiente - Canguaretama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link href="rafa-css.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+
+    <link href="css/pontos_coleta.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+
+
+</head>
+
+
+<div id="header-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#header-placeholder").load("header.html");
+});
+
+
+</script>
+
+
+<body>
+
+<h1 class="text-center">
+    PONTOS DE COLETA DE LIXO
+</h1>
+
+<div>
+    <select id="selecao_menu" class="form-select" aria-label="Default select example" name="select">
+        <option value="valor1" selected>Escolha uma cidade</option>
+        <option value="valor1">Canguaretama</option>
+        <option value="valor2">Baía Formosa</option>
+        <option value="valor3">Pedro Velho</option>
+        <option value="valor4">Vila Flor</option>
+    </select>
+
+    <script>
+        let select = document.querySelector(".form-select")
+        
+        select.addEventListener('change', function() 
+        {
+            let selectedText = this.options[this.selectedIndex].text;
+
+            if (selectedText == "Canguaretama")
+                {
+                const div = document.getElementById("mapa_u")
+                div.innerHTML = '<iframe width="100%" height="600px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/canguaretama_1000244?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/canguaretama_1000244?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true">Ver em ecrã total</a></p>'
+                }
+            
+            else if (selectedText == "Baía Formosa")
+                {
+                const div = document.getElementById("mapa_u")
+                div.innerHTML = '<iframe width="100%" height="600px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-br/map/baia-formosa_999948?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/pt-br/map/baia-formosa_999948?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true">Ver em ecrã total</a></p>'
+                }
+            else if (selectedText == "Pedro Velho")
+                {
+                const div = document.getElementById("mapa_u")
+                div.innerHTML = '<iframe width="100%" height="600px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-pt/map/pedro-velho_1000245?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/pt-pt/map/pedro-velho_1000245?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true">Ver em ecrã total</a></p>'
+
+                }              
+            else if (selectedText == "Vila Flor")
+                {
+                const div = document.getElementById("mapa_u")
+                div.innerHTML = '<iframe width="100%" height="600px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/pt-pt/map/vila-flor_1000246?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/pt-pt/map/vila-flor_1000246?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true">Ver em ecrã total</a></p>'
+                }
+            
+                else if (selectedText == "Escolha uma cidade")
+                {
+                const div = document.getElementById("mapa_u")
+                div.innerHTML = ''
+                }
+                
+        });
+            </script>
+</div>
+
+
+<div id = mapa_u></div>
+
+  
+
+
+
+
+
+<div id="footer-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#footer-placeholder").load("footer.html");
+});
+</script>
+
+
+
+
+</html>
