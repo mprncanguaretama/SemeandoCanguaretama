@@ -11,8 +11,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <link href="carrosel_3d.css" rel="stylesheet">
-
+    <link href="carrosel_3d.css" rel="stylesheet">
 
 
 </head>
@@ -28,6 +27,7 @@ $(document).ready(function(){
 
 
 
+
 </script>
 
 
@@ -39,9 +39,9 @@ $(document).ready(function(){
 
     <a href=".\quem_somos.html#francisco-galvao">
 
-    <h5 class="text-center author">Francisco Galvão    </h5>
+        <h5 class="text-center author">Francisco Galvão </h5>
 
-        </a>
+    </a>
 
     <p>Seguindo o que sugerem as fontes
 
@@ -255,7 +255,6 @@ SOUSA, Augusto Fausto de. Fortificações no Brazil. RIHGB. Rio de Janeiro: Tomo
     <!--    </section>-->
 
 
-
     <div class="divider"></div>
     <h2> Registros fotográficos da História do Fortim de Barra de Cunhaú</h2>
     <div id="slider">
@@ -293,21 +292,20 @@ SOUSA, Augusto Fausto de. Fortificações no Brazil. RIHGB. Rio de Janeiro: Tomo
     <p> O Fortim de Barra de Cunhaú fica localizado a aproximadamente 100km de Natal,
         situando-se no Município de Canguaretama</p>
 
-    
-        <div id="map"></div>
 
-        <script>
-            function initMap(){
-                    let fortim = {lat: -6.30280, lng: -35.03699};
-                    let map = new google.maps.Map(
-                        document.getElementById('map'), {zoom: 15, center: fortim}
-                    );
-                    let marker = new google.maps.Marker({position: fortim, map: map})} 
-            </script>
-    
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
-    
+    <div id="map" style="width: 100%; height: 400px;"></div>
 
+    <script>
+  const latitude = -6.30280;
+  const longitude = -35.03699;
+  const zoomLevel = 15; // Ajuste o nível de zoom conforme necessário
+
+  const mapHTML = `<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01}%2C${latitude - 0.01}%2C${longitude + 0.01}%2C${latitude + 0.01}&layer=mapnik&marker=${latitude}%2C${longitude}" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=${zoomLevel}/${latitude}/${longitude}">Ver mapa maior</a></small>`;
+
+  document.getElementById('map').innerHTML = mapHTML;
+
+
+    </script>
 
 
     <div class="divider"></div>
@@ -326,6 +324,7 @@ SOUSA, Augusto Fausto de. Fortificações no Brazil. RIHGB. Rio de Janeiro: Tomo
 $(document).ready(function(){
     $("#footer-placeholder").load("footer.html");
 });
+
 
 
 

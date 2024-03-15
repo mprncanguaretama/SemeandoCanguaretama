@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 
 
+
 </script>
 
 
@@ -271,22 +272,18 @@ $(document).ready(function(){
     <p> A gruta do bode fica localizada a aproximadamente 100km de Natal,
         situando-se no Município de Canguaretama.</p>
 
-    <div id="map"></div>
+    <div id="map" style="width: 100%; height: 400px;"></div>
 
     <script>
-            function initMap(){
-                    let gruta = {lat: -6.34741, lng: -35.16459};
-                    let map = new google.maps.Map(
-                        document.getElementById('map'), {zoom: 15, center: gruta}
-                    );
-                    let marker = new google.maps.Marker({position: gruta, map: map})} 
+  const latitude = -6.34741;
+  const longitude = -35.16459;
+  const zoomLevel = 15; // Ajuste o nível de zoom conforme necessário
 
+  const mapHTML = `<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01}%2C${latitude - 0.01}%2C${longitude + 0.01}%2C${latitude + 0.01}&layer=mapnik&marker=${latitude}%2C${longitude}" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=${zoomLevel}/${latitude}/${longitude}">Ver mapa maior</a></small>`;
+
+  document.getElementById('map').innerHTML = mapHTML;
 
     </script>
-
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
-
 
     <div class="divider"></div>
 
@@ -324,6 +321,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#footer-placeholder").load("footer.html");
 });
+
 
 
 </script>

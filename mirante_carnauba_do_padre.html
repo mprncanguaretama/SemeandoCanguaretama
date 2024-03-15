@@ -132,19 +132,24 @@ $(document).ready(function(){
     <h2>Onde fica?</h2>
     <p> O mirante de carnaúba do padre fica localizado a aproximadamente 100km de Natal,
         situando-se no Município de Pedro Velho</p>
-        <div id="map"></div>
 
-        <script>
-            function initMap(){
-                    let mirante_carnauba = {lat: -6.47367, lng: -35.20337};
-                    let map = new google.maps.Map(
-                        document.getElementById('map'), {zoom: 15, center: mirante_carnauba}
-                    );
-                    let marker = new google.maps.Marker({position: mirante_carnauba, map: map})} 
-            </script>
-    
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
-    
+
+
+     <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <script>
+  const latitude = -6.47367;
+  const longitude =-35.20337;
+  const zoomLevel = 15; // Ajuste o nível de zoom conforme necessário
+
+  const mapHTML = `<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01}%2C${latitude - 0.01}%2C${longitude + 0.01}%2C${latitude + 0.01}&layer=mapnik&marker=${latitude}%2C${longitude}" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=${zoomLevel}/${latitude}/${longitude}">Ver mapa maior</a></small>`;
+
+  document.getElementById('map').innerHTML = mapHTML;
+
+
+    </script>
+
+
 
 
                             <div class="divider"></div>

@@ -268,18 +268,24 @@ $(document).ready(function(){
     <p> O Santuário das Tartarugas Marinhas fica localizad0 a aproximadamente 101km de Natal,
         situando-se no Município de Baía Formosa.</p>
 
-    <div id="map"></div>
+
+
+
+     <div id="map" style="width: 100%; height: 400px;"></div>
 
     <script>
-        function initMap(){
-                let tartarugas = {lat: -6.39572, lng: -34.98572};
-                let map = new google.maps.Map(
-                    document.getElementById('map'), {zoom: 15, center: tartarugas}
-                );
-                let marker = new google.maps.Marker({position: tartarugas, map: map})} 
-        </script>
+  const latitude = -6.39572;
+  const longitude =-34.98572;
+  const zoomLevel = 15; // Ajuste o nível de zoom conforme necessário
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6favgUy5ep1zsq68xh7Yv2ylnRHDQKg&callback=initMap"></script>
+  const mapHTML = `<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01}%2C${latitude - 0.01}%2C${longitude + 0.01}%2C${latitude + 0.01}&layer=mapnik&marker=${latitude}%2C${longitude}" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=${zoomLevel}/${latitude}/${longitude}">Ver mapa maior</a></small>`;
+
+  document.getElementById('map').innerHTML = mapHTML;
+
+
+    </script>
+
+
 
 
     
