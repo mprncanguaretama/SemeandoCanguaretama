@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🌎 Meio Ambiente - Canguaretama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="rafa-css.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+.supporter-item ul {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o padding padrão para alinhar à esquerda */
+  }
+  .supporter-item li {
+    margin-bottom: 15px; /* Adiciona espaço entre os itens da lista */
+  }
+  .book-link, .source-link {
+
+    text-decoration: none;
+    color: #28a745; /* A green color to distinguish from the download link */
+    font-size: 1.1em;
+    margin-left: 10px; /* Adiciona espaço antes dos links */
+  }
+  .book-link:before {
+      color: #28a745; /* A green color to distinguish from the download link */
+
+    content: "⟐"; /* Adiciona um marcador visual diferente antes do link da fonte */
+    margin-right: 5px;
+  }
+  .source-link:before {
+    content: "⟐"; /* Adiciona um marcador visual diferente antes do link da fonte */
+    margin-right: 5px;
+    color: #28a745; /* Cor verde para diferenciar */
+  }
+  .book-link:hover, .source-link:hover {
+    text-decoration: underline;
+  }
+  .source-link {
+    color: #28a745; /* A green color to distinguish from the download link */
+    font-size: 1.1em;
+  }
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="header-placeholder"></div>
+
+<script>
+$(document).ready(function(){
+    $("#header-placeholder").load("header.html");
+});
+
+
+
+
+
+
+</script>
+
+<main>
+
+    <section class="section-rafa">
+        <h1 class="text-center">Publicações</h1>
+        <br>
+        <p>Este espaço é dedicado à divulgação de materiais pedagógicos, publicações e livros essenciais para a educação
+            ambiental. Entendemos que o jargão técnico e a complexidade dos conceitos ambientais podem tornar o
+            aprendizado menos acessível ao público geral. É de suma importância que todos tenham acesso claro e direto
+            às informações que educam e esclarecem sobre as práticas sustentáveis e a importância da conservação do meio
+            ambiente.
+
+        </p>
+        <p>Com o intuito de fomentar essa transparência e facilitar o entendimento, disponibilizamos uma ampla gama de
+            recursos públicos relacionados à educação ambiental. Nosso objetivo é capacitar os cidadãos de nossa região
+            com conhecimentos valiosos, possibilitando um engajamento efetivo e uma participação ativa na preservação
+            ambiental. Assim, garantimos que a comunidade esteja bem informada e preparada para contribuir com a defesa
+            do meio ambiente.
+
+
+        </p>
+
+
+        <h2>Livros Disponíveis para Download</h2>
+
+        <div class="supporter-item">
+            <ul>
+                <li>
+                    Patrimônio Histórico e Cultural – salvaguarda e atuação do Ministério Público <a
+                        href="arquivos_pdf/patrimonio_historico_cultural.pdf" class="book-link" download>Baixar PDF</a>
+                    <a href="https://www.cnmp.mp.br/portal/publicacoes/17069-patrimonio-historico-e-cultural-salvaguarda-e-atuacao-do-ministerio-publico"
+                       class="source-link" target="_blank">Fonte</a>
+                </li>
+                <!-- Adicione mais livros aqui -->
+            </ul>
+        </div>
+
+
+    </section>
+    <section class="return">
+        <a href="index.html"> ⬅ Página Principal</a>
+    </section>
+</main>
+
+
+<div id="footer-placeholder"></div>
+<script>
+$(document).ready(function(){
+    $("#footer-placeholder").load("footer.html");
+});
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</html>
