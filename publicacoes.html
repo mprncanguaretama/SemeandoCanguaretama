@@ -7,52 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="rafa-css.css" rel="stylesheet"/>
+    <link href="publicacoes.css" rel="stylesheet"/>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-    <style>
-.supporter-item ul {
-    list-style-type: none; /* Remove as bolinhas da lista */
-    padding: 0; /* Remove o padding padrão para alinhar à esquerda */
-  }
-  .supporter-item li {
-    margin-bottom: 15px; /* Adiciona espaço entre os itens da lista */
-    font-size: 1.2em; /* Aumenta o tamanho da fonte */
-  }
-
-
-  .book-link, .source-link {
-
-    text-decoration: none;
-    color: #28a745; /* A green color to distinguish from the download link */
-    font-size: 1.1em;
-    margin-left: 10px; /* Adiciona espaço antes dos links */
-  }
-  .book-link:before {
-      color: #28a745; /* A green color to distinguish from the download link */
-
-    content: "⟐"; /* Adiciona um marcador visual diferente antes do link da fonte */
-    margin-right: 5px;
-  }
-  .source-link:before {
-    content: "⟐"; /* Adiciona um marcador visual diferente antes do link da fonte */
-    margin-right: 5px;
-    color: #28a745; /* Cor verde para diferenciar */
-  }
-  .book-link:hover, .source-link:hover {
-    text-decoration: underline;
-  }
-  .source-link {
-    color: #28a745; /* A green color to distinguish from the download link */
-    font-size: 1.1em;
-  }
-
-
-
-
-
-
-    </style>
 
 </head>
 <body>
@@ -64,6 +22,7 @@
 $(document).ready(function(){
     $("#header-placeholder").load("header.html");
 });
+
 
 
 
@@ -99,21 +58,26 @@ $(document).ready(function(){
         <div class="supporter-item">
             <ul>
                 <li>
-                    Patrimônio Histórico e Cultural – salvaguarda e atuação do Ministério Público <a
-                        href="arquivos_pdf/patrimonio_historico_cultural.pdf" class="book-link" download>Baixar PDF</a>
+                    Patrimônio Histórico e Cultural – salvaguarda e atuação do Ministério Público
+                    <a href="arquivos_pdf/patrimonio_historico_cultural.pdf" class="book-link" download>Baixar PDF</a>
                     <a href="https://www.cnmp.mp.br/portal/publicacoes/17069-patrimonio-historico-e-cultural-salvaguarda-e-atuacao-do-ministerio-publico"
                        class="source-link" target="_blank">Fonte</a>
                 </li>
+            </ul>
+        </div>
 
+        <div class="supporter-item">
+            <ul>
                 <li>
-                    Desastres Socioambientais e Mudanças Climáticas<a
-                        href="arquivos_pdf/mudancas-climaticas.pdf" class="book-link" download>Baixar PDF</a>
+                    Desastres Socioambientais e Mudanças Climáticas
+                    <a href="arquivos_pdf/mudancas-climaticas.pdf" class="book-link" download>Baixar PDF</a>
                     <a href="https://www.cnmp.mp.br/portal/publicacoes/17261-desastres-socioambientais-e-mudancas-climaticas-aspectos-doutrinarios"
                        class="source-link" target="_blank">Fonte</a>
                 </li>
-                <!-- Adicione mais livros aqui -->
             </ul>
         </div>
+
+        <div style="margin-bottom:200px"></div>
 
 
     </section>
@@ -128,6 +92,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#footer-placeholder").load("footer.html");
 });
+
 
 
 

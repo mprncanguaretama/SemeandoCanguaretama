@@ -1,0 +1,46 @@
+
+
+
+
+.supporter-item ul {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o padding padrão para alinhar à esquerda */
+  }
+  .supporter-item li {
+    margin-bottom: 15px; /* Adiciona espaço entre os itens da lista */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+  }
+
+
+  .book-link, .source-link {
+
+    text-decoration: none;
+    color: #28a745; /* A green color to distinguish from the download link */
+    font-size: 1.1em;
+    margin-left: 10px; /* Adiciona espaço antes dos links */
+  }
+  .book-link:before {
+      color: #28a745; /* A green color to distinguish from the download link */
+
+    content: "⟐"; /* Adiciona um marcador visual diferente antes do link da fonte */
+    margin-right: 5px;
+  }
+  .source-link:before {
+    content: "⟐"; /* Adiciona um marcador visual diferente antes do link da fonte */
+    margin-right: 5px;
+    color: #28a745; /* Cor verde para diferenciar */
+  }
+  .book-link:hover, .source-link:hover {
+    text-decoration: underline;
+  }
+  .source-link {
+    color: #28a745; /* A green color to distinguish from the download link */
+    font-size: 1.1em;
+  }
+
+.supporter-item {
+  margin-left: 65px !important;
+  margin-right: 65px !important;
+
+
+}
