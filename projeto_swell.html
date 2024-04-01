@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Garante a utilização da codificação UTF-8 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+ * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; /* Isso assegura que padding e border não afetem a largura externa dos elementos */
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px; /* Espaçamento entre contêineres de imagens */
+
+
+
+    }
+
+.image-container img {
+    width: 100vw; /* Estabelece a largura da imagem em 100% da largura da viewport */
+    height: 80vh; /* Estabelece a altura da imagem em 100% da altura da viewport */
+    object-fit: contain; /* Garante que toda a imagem seja visível e contenha dentro do contêiner designado */
+    display: block; /* Remove espaços extras abaixo da imagem */
+    margin: auto; /* Centraliza a imagem caso ela não ocupe a viewport inteira */
+}
+
+
+</style>
+
+<body>
+<div id="header-placeholder"></div>
+
+
+<main class="medium">
+    <br>
+    <br>
+    <br>
+
+        <br>
+        <h1 class="text-center"> PROJETO SWELL</h1>
+        <br>
+
+        <div class="image-container" id="page1">
+            <img src="img_projeto_swell/img1.png" alt="Página 1">
+        </div>
+        <div class="image-container" id="page2">
+            <img src="img_projeto_swell/img2.png" alt="Página 2">
+        </div>
+        <div class="image-container" id="page3">
+            <img src="img_projeto_swell/img3.png" alt="Página 3">
+        </div>
+        <div class="image-container" id="page4">
+            <img src="img_projeto_swell/img4.png" alt="Página 4">
+        </div>
+        <div class="image-container" id="page5">
+            <img src="img_projeto_swell/img5.png" alt="Página 5">
+        </div>
+    <div class="image-container" id="page6">
+            <img src="img_projeto_swell/img6.png" alt="Página 6">
+        </div>
+
+
+
+
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    $(document).ready(function(){
+        $("#header-placeholder").load("header.html");
+        $("#footer-placeholder").load("footer.html");
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+
+
+
+</main>
+</body>
+</html>
