@@ -29,7 +29,61 @@
     object-fit: contain; /* Garante que toda a imagem seja visível e contenha dentro do contêiner designado */
     display: block; /* Remove espaços extras abaixo da imagem */
     margin: auto; /* Centraliza a imagem caso ela não ocupe a viewport inteira */
+    animation: left_run 3s forwards; /* Aplica a animação */
+    animation-iteration-count: 1;
+    transform: translateX(-100%); /* Começa fora da tela, à esquerda */
+
+
 }
+
+@keyframes left_run {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Torna a imagem visível no início da animação */
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1; /* Mantém a imagem visível após a conclusão da animação */
+    }
+}
+
+
+/* Aplica a animação com atrasos específicos a cada contêiner de imagem */
+#page1 img {
+    animation: left_run 3s forwards;
+}
+
+#page2 img {
+    animation: left_run 3s forwards;
+    animation-delay: 3s; /* Atraso para iniciar após a animação do page1 terminar */
+}
+
+#page3 img {
+    animation: left_run 3s forwards;
+    animation-delay: 6s; /* Atraso para iniciar após a animação do page2 terminar */
+}
+
+#page4 img {
+    animation: left_run 3s forwards;
+    animation-delay: 9s; /* E assim por diante */
+}
+
+#page5 img {
+    animation: left_run 3s forwards;
+    animation-delay: 12s;
+}
+
+#page6 img {
+    animation: left_run 3s forwards;
+    animation-delay: 15s;
+}
+
+
+
+
 
 
 </style>
