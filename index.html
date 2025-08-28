@@ -9,7 +9,21 @@
     <link href="rafa-css.css" rel="stylesheet"/>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<style>
+    #conteudo-texto{
+    display: none;
+    }
 
+    #imagem-intro{
+    max-width:100%;
+    display: block;
+    margin: 0 auto;
+    }
+
+
+
+
+</style>
 
 </head>
 <body>
@@ -26,8 +40,10 @@ $(document).ready(function(){
 <main class="medium">
     <br>
     <br>
+    <img id="imagem-intro" src="./imagens/imagem-intro.png" alt="Natureza - Canguaretama">
+
     <br>
-    <section class="section-rafa">
+    <section id="conteudo-texto" class="section-rafa">
         <br>
         <h1 class="text-center"> APRESENTAÇÃO</h1>
         <br>
@@ -113,6 +129,15 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
     $("#footer-placeholder").load("footer.html");
+
+    // Aguarda 3 segundos e exibe o texto com fade
+    setTimeout(function(){
+        // Faz a imagem sumir
+        $("#imagem-intro").fadeOut(1500, function(){
+            // Quando a imagem terminar de sumir, mostra o texto
+            $("#conteudo-texto").fadeIn(1500);
+        });
+    }, 3000);
 });
 </script>
 

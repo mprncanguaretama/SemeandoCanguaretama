@@ -17,6 +17,11 @@
     color: #FFFFFF;
     }
 
+td, th {
+  padding: 0.5em; /* or 0.5em 1em... or any value different from 0 */
+}
+
+
 section-rafa
         {
           padding: 50px;
